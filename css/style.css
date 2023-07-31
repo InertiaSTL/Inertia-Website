@@ -160,6 +160,7 @@ header .ham-burger.active span:nth-child(2){
   display: block;
   border-radius:4px;
   text-align: center;
+  vertical-align: top;
   left:50%;
   margin-left: -13px;
 }
@@ -189,12 +190,10 @@ header .ham-burger.active span:nth-child(2){
 	font-weight: 700;
 	text-transform: uppercase;
 	margin:0;
-	vertical-align: top
 }
 
 .home h1 span{
 	color:#FFFFFF;
-	vertical-align: top;
 }
 
 
