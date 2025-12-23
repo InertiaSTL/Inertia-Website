@@ -12,6 +12,21 @@
   </style>
   
 </head>
+
+<!-- Free Trial Popup -->
+<div id="trial-popup">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h2>Try a Free Week of Taekwondo</h2>
+    <p>
+      New students are invited to a FREE trial week at Inertia Martial Arts & Fitness.
+      No obligation — just come train!
+    </p>
+    <a href="#free-trial" class="popup-btn">Request Free Trial</a>
+  </div>
+</div>
+
+	
 <body>
  
  <!-- Start Header  -->
@@ -376,23 +391,23 @@
  <!-- End Contact -->
 
 <!-- Start Free Trial Request -->
-<section class="free-trial">
-  <div class="container">
-    <h2>Request a Free Trial Class</h2>
-    <p class="title-p">
-      Interested in trying Chung Do Kwan Taekwondo?  
-      Send us a request and we’ll get you scheduled for a free trial week!
-    </p>
+<form
+  action="https://formsubmit.co/inertiastl@gmail.com"
+  method="POST"
+  autocomplete="on">
 
-    <form action="mailto:inertiastl@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <input type="text" name="Phone" placeholder="Your Phone Number">
-      <textarea name="Message" placeholder="Tell us who the trial is for (age, experience, questions)"></textarea>
-      <button type="submit">Request Free Trial</button>
-    </form>
-  </div>
-</section>
+  <!-- Hidden settings -->
+  <input type="hidden" name="_subject" value="Free Trial Class Request">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+  <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
+  <input type="tel" name="phone" placeholder="Your Phone Number" autocomplete="tel">
+  <textarea name="message" placeholder="Tell us who the trial is for (age, experience, questions)"></textarea>
+
+  <button type="submit">Request Free Trial</button>
+</form>
 <!-- End Free Trial Request -->
 
  <!-- jquery -->
@@ -449,6 +464,7 @@
   </script>
 </body>
 </html>
+
 
 
 
