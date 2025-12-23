@@ -463,7 +463,23 @@
   </div>
 </div>
 	
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!localStorage.getItem("trialPopupShown")) {
+      setTimeout(() => {
+        document.getElementById("trial-popup").style.display = "flex";
+      }, 1500);
+    }
+
+    document.querySelector(".popup-close").onclick = function () {
+      document.getElementById("trial-popup").style.display = "none";
+      localStorage.setItem("trialPopupShown", "true");
+    };
+  });
+</script>
+
 </html>
+
 
 
 
