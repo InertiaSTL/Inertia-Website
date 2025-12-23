@@ -257,20 +257,25 @@
   	 	  </div>
 
 		 
-		 <!-- Google Calendar Embed -->
-<div class="box calendar wow fadeInUp" data-wow-delay="0.2s">
-  <div class="calendar-wrapper">
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=inertiastl@gmail.com&ctz=UTC"
-      frameborder="0"
-      scrolling="no">
-    </iframe>
-  </div>
-</div>
+      <!-- Tabbed Google Calendar -->
+      <div class="box calendar wow fadeInUp" data-wow-delay="0.2s">
+        <div class="calendar-tabs">
+          <button class="active" data-mode="MONTH">Month</button>
+          <button data-mode="WEEK">Week</button>
+          <button data-mode="AGENDA">Agenda</button>
+        </div>
+        <div class="calendar-wrapper">
+          <iframe id="calendar-iframe"
+            src="https://calendar.google.com/calendar/embed?src=inertiastl%40gmail.com&ctz=UTC&mode=MONTH"
+            frameborder="0"
+            scrolling="no">
+          </iframe>
+        </div>
+      </div>
 
-		 
-  	 </div>
-  </section>
+    </div>
+  </div>
+</section>
 <!-- End Schedule -->
 
 <!-- Start Gallery -->
@@ -501,11 +506,31 @@
   });
 </script>
 
+<!-- Add this script at the bottom of your body -->
+<script>
+  const buttons = document.querySelectorAll('.calendar-tabs button');
+  const iframe = document.getElementById('calendar-iframe');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      buttons.forEach(b => b.classList.remove('active'));
+      // Add active to clicked button
+      btn.classList.add('active');
+
+      // Update calendar iframe mode
+      const mode = btn.dataset.mode;
+      iframe.src = `https://calendar.google.com/calendar/embed?src=inertiastl@gmail.com&ctz=America/Chicago&mode=${mode}`;
+    });
+  });
+</script>
+	
 </body>
 
 
 
 </html>
+
 
 
 
