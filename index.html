@@ -377,23 +377,32 @@
  <!-- End Contact -->
 
 <!-- Start Free Trial Request -->
-<form
-  action="https://formsubmit.co/inertiastl@gmail.com"
-  method="POST"
-  autocomplete="on">
+<section class="free-trial" id="free-trial">
+  <div class="container">
+    <h2>Request a Free Trial Class</h2>
+    <p class="title-p">
+      Interested in trying Chung Do Kwan Taekwondo?
+      Fill out the form below and we’ll get you scheduled!
+    </p>
 
-  <!-- Hidden settings -->
-  <input type="hidden" name="_subject" value="Free Trial Class Request">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
+    <form
+      action="https://formsubmit.co/inertiastl@gmail.com"
+      method="POST"
+      autocomplete="on">
 
-  <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-  <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
-  <input type="tel" name="phone" placeholder="Your Phone Number" autocomplete="tel">
-  <textarea name="message" placeholder="Tell us who the trial is for (age, experience, questions)"></textarea>
+      <input type="hidden" name="_subject" value="Free Trial Class Request">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-  <button type="submit">Request Free Trial</button>
-</form>
+      <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+      <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
+      <input type="tel" name="phone" placeholder="Your Phone Number" autocomplete="tel">
+      <textarea name="message" placeholder="Tell us who the trial is for (age, experience, questions)"></textarea>
+
+      <button type="submit">Request Free Trial</button>
+    </form>
+  </div>
+</section>
 <!-- End Free Trial Request -->
 
  <!-- jquery -->
@@ -448,7 +457,6 @@
     );
     wow.init();
   </script>
-</body>
 
 <!-- Free Trial Popup -->
 <div id="trial-popup">
@@ -462,23 +470,31 @@
     <a href="#free-trial" class="popup-btn">Request Free Trial</a>
   </div>
 </div>
-	
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("trial-popup");
+    const closeBtn = document.querySelector(".popup-close");
+
     if (!localStorage.getItem("trialPopupShown")) {
       setTimeout(() => {
-        document.getElementById("trial-popup").style.display = "flex";
+        popup.style.display = "flex";
       }, 1500);
     }
 
-    document.querySelector(".popup-close").onclick = function () {
-      document.getElementById("trial-popup").style.display = "none";
+    closeBtn.addEventListener("click", function () {
+      popup.style.display = "none";
       localStorage.setItem("trialPopupShown", "true");
-    };
+    });
   });
 </script>
 
+</body>
+
+
+
 </html>
+
 
 
 
