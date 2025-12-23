@@ -351,28 +351,35 @@
  <!-- Start Contact -->
   <section class="contact" id="contact">
 	<div class="container">
- 	 <div class="content">
-   		 <div class="box text wow slideInRight">
-                 <h2>Get Connected with Inertia</h2>
-                  <p class="title-p">We'd love to connect with you! Please join us for a week of free trial classes or reach out via one of the methods below! If you are a student, make sure you are following Inertia's socials to stay up to date on everything Taekwondo!</p>
+ 	<div class="content contact-layout">
+  <!-- Left: Contact Info -->
+  <div class="box text wow slideInLeft">
+    <h2>Get Connected with Inertia</h2>
+	<p class="title-p">We'd love to connect with you! Please join us for a week of free trial classes or reach out via one of the methods below! If you are a student, make sure you are following Inertia's socials to stay up to date on everything Taekwondo!</p>
                   <div class="info">
-                      <ul>
-                          <li><span class="fa fa-map-marker"></span> 620 N Woods Mill Rd · Chesterfield, MO 63017</li>
-                          <li><span class="fa fa-phone"></span> (636)-357-4093</li>
-                          <li><span class="fa fa-envelope"></span> inertiastl@gmail.com</li>
-                      </ul>
-                  </div>
-                  <div class="social">
+
+    <ul class="info">
+      <li><span class="fa fa-map-marker"></span> 620 N Woods Mill Rd · Chesterfield, MO 63017</li>
+      <li><span class="fa fa-phone"></span> (636)-357-4093 </li>
+      <li><span class="fa fa-envelope"></span> inertiastl@gmail.com</li>
+    </ul>
+ </div>
+<div class="social">
                        <a href="https://www.facebook.com/inertiastl"><span class="fa fa-facebook"></span></a>
                        <a href="https://www.instagram.com/inertiastl/"><span class="fa fa-instagram"></span></a>
                        <a href="https://www.youtube.com/channel/UCAe8EBjt8Eemgnx9bXXp1vg"><span class="fa fa-youtube-play"></span></a>
                   </div>
 
-                  <div class="copy">
-                      Copyright &copy 2026; Inertia Martial Arts and Fitness LLC: · All Rights Reserved
-                  </div>
-            </div>
-        </div>
+    <div class="copy">
+      Copyright &copy 2026; Inertia Martial Arts and Fitness LLC: · All Rights Reserved
+    </div>
+  </div>
+
+  <!-- Right: Google Map -->
+  <div class="box map wow slideInRight">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5732.839074988073!2d-90.49911045388482!3d38.67099353241457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df2d42fc10d9e5%3A0x3b16fc798e4297d3!2sInertia%20Martial%20Arts%20and%20Fitness!5e0!3m2!1sen!2sus!4v1766522943882!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
      </div>
   </section>
  <!-- End Contact -->
@@ -468,7 +475,7 @@
       New students are invited to a FREE trial week at Inertia Martial Arts & Fitness.
       No obligation — just come train!
     </p>
-    <a href="#free-trial" class="popup-btn">Request Free Trial</a>
+	   <a href="#free-trial" class="popup-btn" id="popup-trial-btn">Request Free Trial</a>
   </div>
 </div>
 
@@ -476,6 +483,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("trial-popup");
     const closeBtn = document.querySelector(".popup-close");
+    const trialBtn = document.getElementById("popup-trial-btn");
 
     if (!localStorage.getItem("trialPopupShown")) {
       setTimeout(() => {
@@ -483,10 +491,13 @@
       }, 1500);
     }
 
-    closeBtn.addEventListener("click", function () {
+    function closePopup() {
       popup.style.display = "none";
       localStorage.setItem("trialPopupShown", "true");
-    });
+    }
+
+    closeBtn.addEventListener("click", closePopup);
+    trialBtn.addEventListener("click", closePopup);
   });
 </script>
 
@@ -495,6 +506,7 @@
 
 
 </html>
+
 
 
 
