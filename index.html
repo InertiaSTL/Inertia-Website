@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Inertia Martial Arts Website</title>
+	<meta charset="utf-8">
+	<title>Inertia Martial Arts & Fitness | Chung Do Kwan Taekwondo in Chesterfield, MO</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Inertia Martial Arts & Fitness in Chesterfield, MO offers Chung Do Kwan Taekwondo classes for all ages, a free trial week, and family-friendly training.">
+	<meta name="keywords" content="Chung Do Kwan, Taekwondo, martial arts, Chesterfield MO, kids martial arts, adult taekwondo, self defense, Inertia Martial Arts">
+	<meta name="robots" content="index,follow">
+	<meta name="theme-color" content="#0b0d12">
+	<meta property="og:title" content="Inertia Martial Arts & Fitness">
+	<meta property="og:description" content="Chung Do Kwan Taekwondo classes for all ages in Chesterfield, MO. Free trial week available.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="Inertia Martial Arts & Fitness">
+	<meta name="twitter:card" content="summary">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <style>
@@ -10,22 +24,45 @@
       visibility: hidden;
     }
   </style>
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MartialArtsSchool",
+    "name": "Inertia Martial Arts & Fitness",
+    "description": "Chung Do Kwan Taekwondo classes for kids, teens, and adults in Chesterfield, Missouri.",
+    "telephone": "+1-636-357-4093",
+    "email": "inertiastl@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "620 N Woods Mill Rd",
+      "addressLocality": "Chesterfield",
+      "addressRegion": "MO",
+      "postalCode": "63017",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.facebook.com/inertiastl",
+      "https://www.instagram.com/inertiastl/",
+      "https://www.youtube.com/channel/UCAe8EBjt8Eemgnx9bXXp1vg"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+ <a class="skip-link" href="#main-content">Skip to main content</a>
  
  <!-- Start Header  -->
  <header>
  	 <div class="container">
  	 	<div class="logo">
- 	 		 <a href="">Inertia <span>Martial Arts & Fitness</span></a>
+ 	 		 <a href="#home">Inertia <span>Martial Arts & Fitness</span></a>
  	 	</div>
- 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	 	<button class="ham-burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
  	       <span></span>	
  	       <span></span>
- 	 	</a>
- 	 	<div class="nav">
+ 	 	</button>
+ 	 	<nav class="nav" id="site-nav" aria-label="Primary">
  	 		<ul>
  	 			<li><a href="#home">Home</a></li>
  	 			<li><a href="#about">About</a></li>
@@ -35,16 +72,27 @@
  	 			<li><a href="#price">Price</a></li>
  	 			<li><a href="#contact">Contact</a></li>
  	 		</ul>
- 	 	</div>
+ 	 	</nav>
  	 </div>
  </header>
  <!-- End Header  -->
 
+ <main id="main-content">
   <!-- Start Home -->
   <section class="home wow flash" id="home">
   	 <div class="container">
-  	 	  <h1 class="wow slideInLeft" data-wow-delay="1s">It's <span>Chung Do Kwan</span> time. Let's go</h1>
-  	 	  <h1 class="wow slideInRight" data-wow-delay="1s">At Inertia, we keep the <span>momentum going</span></h1>
+  	 	  <p class="eyebrow wow slideInLeft" data-wow-delay="0.5s">Chung Do Kwan Taekwondo · Chesterfield, Missouri</p>
+  	 	  <h1 class="wow slideInLeft" data-wow-delay="0.8s">Inertia Martial Arts & Fitness</h1>
+  	 	  <p class="hero-subtitle wow slideInRight" data-wow-delay="1s">Train with certified instructors, build confidence, and join a family-friendly community that keeps the momentum going.</p>
+        <div class="hero-actions wow fadeInUp" data-wow-delay="1.2s">
+          <a class="btn primary" href="#free-trial">Start a Free Trial</a>
+          <a class="btn outline" href="#schedule">View Schedule</a>
+        </div>
+        <div class="hero-badges wow fadeInUp" data-wow-delay="1.4s">
+          <span class="badge">All Ages Welcome</span>
+          <span class="badge">Family Discounts</span>
+          <span class="badge">No Contracts</span>
+        </div>
   	 </div>
   	  <!-- go down -->
   	      <a href="#about" class="go-down">
@@ -59,12 +107,12 @@
  <!-- Start About -->
   <section class="about" id="about">
   	  <div class="container">
-  	  	  <div class="content">
-  	  	  	   <div class="box wow bounceInUp">
-  	  	  	   	   <div class="inner">
-  	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about1.jpg" alt="about" />
-  	  	  	   	   	   </div>
+ 	  <div class="content">
+  	  	   <div class="box wow bounceInUp">
+  	  	   	   <div class="inner">
+  	  	   	   	   <div class="img">
+  	  	   	   	   	  <img src="images/about1.jpg" alt="Instructor guiding a beginner Taekwondo class" loading="lazy" />
+  	  	   	   	   </div>
                        <div class="text">
                        	   <h4>Free Trial Week</h4>
                        	   <p>It's nervewracking starting a new journey into fitness and martial arts, that's why Inertia offers a free week of trial classes to test the waters and ensure Chung Do Kwan Taekwondo is the right fit for you! Inertia's instructors, Miss Paige and Mister Joe will guide you or your child through the first basics learned as a no belt and your very first form!</p>
@@ -75,7 +123,7 @@
   	  	  	   	<div class="box wow bounceInUp" data-wow-delay="0.2s">
   	  	  	   	   <div class="inner">
   	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about2.jpg" alt="about" />
+  	  	  	   	   	   	  <img src="images/about2.jpg" alt="Certified Taekwondo instructors at Inertia" loading="lazy" />
   	  	  	   	   	   </div>
                        <div class="text">
                        	   <h4>Expert Instructors</h4>
@@ -86,7 +134,7 @@
   	  	  	   <div class="box wow bounceInUp" data-wow-delay="0.4s">
   	  	  	   	   <div class="inner">
   	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about3.jpg" alt="about" />
+  	  	  	   	   	   	  <img src="images/about3.jpg" alt="Student training for strength and confidence" loading="lazy" />
   	  	  	   	   	   </div>
                        <div class="text">
                        	   <h4>Build Perfect Body</h4>
@@ -157,7 +205,7 @@
 	<div class="container">
 		 <div class="content">
 		 	  <div class="box img wow slideInLeft">
-		 	  	 <img src="images/class2.jpg" alt="classes" />
+		 	  	 <img src="images/class2.jpg" alt="Taekwondo class in session" loading="lazy" />
 		 	  </div>
 		 	  <div class="box text wow slideInRight">
 		 	  	 <h2>Our Classes</h2>
@@ -165,7 +213,7 @@
 		 	  	<div class="class-items">
 		 	  	 <div class="item wow bounceInUp">
                      <div class="item-img">
-                     	 <img src="images/class1.jpg" alt="classes" />
+                     	 <img src="images/class1.jpg" alt="Traditional Chung Do Kwan Taekwondo class" loading="lazy" />
                      	 <div class="price">
                      	 	 $89/month
                      	 </div>
@@ -190,10 +238,10 @@
  		 	  <div class="box text wow slideInLeft">
  		 	  	 <h2>Start Your Training Today</h2>
  		 	  	 <p>Taekwondo is an excellent full-body workout that improves cardiovascular health, flexibility, and strength. You'll be amazed at the positive impact it has on your overall well-being.</p>
- 		 	  	 <a href="" class="btn">Start Now</a>
+ 		 	  	 <a href="#free-trial" class="btn primary">Start Now</a>
  		 	  </div>
  		 	  <div class="box img wow slideInRight">
- 		 	  	 <img src="images/gallery4.jpg" alt="start today" />
+ 		 	  	 <img src="images/gallery4.jpg" alt="Students training together in the dojang" loading="lazy" />
  		 	  </div>
 
  		 </div>
@@ -203,18 +251,19 @@
 
 <!-- Start Schedule -->
   <section class="schedule" id="schedule">
+    <div class="container">
  		 	  	 <h2>Class Schedule</h2>
  		 	  	 <p>Our class schedule is designed to accommodate diverse interests and commitments. Whether you are a beginner looking to explore the world of martial arts or an experienced practitioner seeking to refine your skills, we have something for everyone.</p>
  
       <!-- Tabbed Google Calendar -->
       <div class="box calendar wow fadeInUp" data-wow-delay="0.2s">
         <div class="calendar-tabs">
-          <button class="active" data-mode="MONTH">Month</button>
-          <button data-mode="WEEK">Week</button>
-          <button data-mode="AGENDA">Agenda</button>
+          <button class="active" data-mode="MONTH" type="button">Month</button>
+          <button data-mode="WEEK" type="button">Week</button>
+          <button data-mode="AGENDA" type="button">Agenda</button>
         </div>
         <div class="calendar-wrapper">
-          <iframe id="calendar-iframe"
+          <iframe id="calendar-iframe" title="Inertia class schedule calendar"
     src="https://calendar.google.com/calendar/embed?
 src=inertiastl%40gmail.com
 &color=%230B57D0
@@ -227,35 +276,35 @@ src=inertiastl%40gmail.com
           </iframe>
         </div>
       </div>
-
     </div>
-  </div>
 </section>
 <!-- End Schedule -->
 
 <!-- Start Gallery -->
   <section class="gallery" id="gallery">
-  	 <h2>Gallery</h2>
-  	<div class="content">
+    <div class="container">
+  	   <h2>Gallery</h2>
+  	  <div class="content">
   		 <div class="box wow slideInLeft">
-  		 	 <img src="images/gallery1.jpeg" alt="gallery" />
+  		 	 <img src="images/gallery1.jpeg" alt="Taekwondo students practicing kicks" loading="lazy" />
   		 </div>
   		 <div class="box wow slideInRight">
-  		 	 <img src="images/gallery2.jpg" alt="gallery" />
+  		 	 <img src="images/gallery2.jpg" alt="Inertia martial arts class photo" loading="lazy" />
   		 </div>
   		 <div class="box wow slideInLeft">
-  		 	 <img src="images/gallery3.jpg" alt="gallery" />
+  		 	 <img src="images/gallery3.jpg" alt="Students training in the dojang" loading="lazy" />
   		 </div>
   		 <div class="box wow slideInRight">
-  		 	 <img src="images/gallery4.jpeg" alt="gallery" />
+  		 	 <img src="images/gallery4.jpeg" alt="Youth Taekwondo class at Inertia" loading="lazy" />
   		 </div>
 		<div class="box wow slideInLeft">
-  		 	 <img src="images/gallery5.jpg" alt="gallery" />
+  		 	 <img src="images/gallery5.jpg" alt="Taekwondo group training session" loading="lazy" />
   		 </div>
 		<div class="box wow slideInRight">
-  		 	 <img src="images/gallery6.jpg" alt="gallery" />
+  		 	 <img src="images/gallery6.jpg" alt="Martial arts students practicing forms" loading="lazy" />
   		 </div>
-  	</div>
+  	  </div>
+    </div>
   </section>
 <!-- End Gallery -->
 
@@ -270,9 +319,9 @@ src=inertiastl%40gmail.com
   	 	  	  	  	   <div class="price-tag">
   	 	  	  	  	   	  $89/Month
   	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src="images/price1.jpg" alt="price" />
-  	 	  	  	  	   </div>
+  	 	  	  	   <div class="img">
+  	 	  	  	   	 <img src="images/price1.jpg" alt="Taekwondo class pricing package" loading="lazy" />
+  	 	  	  	   </div>
   	 	  	  	  	   <div class="text">
   	 	  	  	  	   	  <h3>Start Your Journey</h3>
   	 	  	  	  	   	  <p>Building Confidence</p>
@@ -280,7 +329,7 @@ src=inertiastl%40gmail.com
   	 	  	  	  	   	  <p>Welcoming Environment</p>
   	 	  	  	  	   	  <p>Cardio for the brain and body</p>
   	 	  	  	  	   	  <p>Fostering Community</p>
-  	 	  	  	  	   	  <a href="" class="btn">Join Now</a>
+  	 	  	  	  	   	  <a href="#free-trial" class="btn">Join Now</a>
   	 	  	  	  	   </div>
   	 	  	  	  </div>
   	 	  	  </div>
@@ -289,9 +338,9 @@ src=inertiastl%40gmail.com
   	 	  	  	  	   <div class="price-tag">
   	 	  	  	  	   	  Call for Family Pricing
   	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src="images/price2.jpg" alt="price" />
-  	 	  	  	  	   </div>
+  	 	  	  	   <div class="img">
+  	 	  	  	   	 <img src="images/price2.jpg" alt="Family Taekwondo training package" loading="lazy" />
+  	 	  	  	   </div>
   	 	  	  	  	   <div class="text">
   	 	  	  	  	   	  <h3>Grow as a Family</h3>
   	 	  	  	  	   	  <p>Motivation and Accountability</p>
@@ -299,7 +348,7 @@ src=inertiastl%40gmail.com
   	 	  	  	  	   	  <p>Healthy Habits</p>
   	 	  	  	  	   	  <p>Quality Time</p>
   	 	  	  	  	   	  <p>Variety of Activities</p>
-  	 	  	  	  	   	  <a href="" class="btn">Join Now</a>
+  	 	  	  	  	   	  <a href="#free-trial" class="btn">Join Now</a>
   	 	  	  	  	   </div>
   	 	  	  	  </div>
   	 	  	  </div>
@@ -318,16 +367,18 @@ src=inertiastl%40gmail.com
 	<p class="title-p">We'd love to connect with you! Please join us for a week of free trial classes or reach out via one of the methods below! If you are a student, make sure you are following Inertia's socials to stay up to date on everything Taekwondo!</p>
                   <div class="info">
 
-    <ul class="info">
-      <li><span class="fa fa-map-marker"></span> 620 N Woods Mill Rd · Chesterfield, MO 63017</li>
-      <li><span class="fa fa-phone"></span> (636)-357-4093 </li>
-      <li><span class="fa fa-envelope"></span> inertiastl@gmail.com</li>
-    </ul>
+    <address>
+      <ul class="info">
+        <li><span class="fa fa-map-marker"></span> 620 N Woods Mill Rd · Chesterfield, MO 63017</li>
+        <li><span class="fa fa-phone"></span> <a href="tel:+16363574093">(636) 357-4093</a></li>
+        <li><span class="fa fa-envelope"></span> <a href="mailto:inertiastl@gmail.com">inertiastl@gmail.com</a></li>
+      </ul>
+    </address>
  </div>
 <div class="social">
-                       <a href="https://www.facebook.com/inertiastl"><span class="fa fa-facebook"></span></a>
-                       <a href="https://www.instagram.com/inertiastl/"><span class="fa fa-instagram"></span></a>
-                       <a href="https://www.youtube.com/channel/UCAe8EBjt8Eemgnx9bXXp1vg"><span class="fa fa-youtube-play"></span></a>
+                       <a href="https://www.facebook.com/inertiastl" aria-label="Inertia on Facebook"><span class="fa fa-facebook"></span></a>
+                       <a href="https://www.instagram.com/inertiastl/" aria-label="Inertia on Instagram"><span class="fa fa-instagram"></span></a>
+                       <a href="https://www.youtube.com/channel/UCAe8EBjt8Eemgnx9bXXp1vg" aria-label="Inertia on YouTube"><span class="fa fa-youtube-play"></span></a>
                   </div>
 
     <div class="copy">
@@ -337,7 +388,7 @@ src=inertiastl%40gmail.com
 
   <!-- Right: Google Map -->
   <div class="box map wow slideInRight">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5732.839074988073!2d-90.49911045388482!3d38.67099353241457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df2d42fc10d9e5%3A0x3b16fc798e4297d3!2sInertia%20Martial%20Arts%20and%20Fitness!5e0!3m2!1sen!2sus!4v1766522943882!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe title="Map to Inertia Martial Arts & Fitness" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5732.839074988073!2d-90.49911045388482!3d38.67099353241457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df2d42fc10d9e5%3A0x3b16fc798e4297d3!2sInertia%20Martial%20Arts%20and%20Fitness!5e0!3m2!1sen!2sus!4v1766522943882!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
      </div>
@@ -362,16 +413,22 @@ src=inertiastl%40gmail.com
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
 
-      <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
-      <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
-      <input type="tel" name="phone" placeholder="Your Phone Number" autocomplete="tel">
-      <textarea name="message" placeholder="Tell us who the trial is for (age, experience, questions)"></textarea>
+      <label class="sr-only" for="trial-name">Your Name</label>
+      <input id="trial-name" type="text" name="name" placeholder="Your Name" required autocomplete="name">
+      <label class="sr-only" for="trial-email">Your Email</label>
+      <input id="trial-email" type="email" name="email" placeholder="Your Email" required autocomplete="email">
+      <label class="sr-only" for="trial-phone">Your Phone Number</label>
+      <input id="trial-phone" type="tel" name="phone" placeholder="Your Phone Number" autocomplete="tel">
+      <label class="sr-only" for="trial-message">Tell us who the trial is for</label>
+      <textarea id="trial-message" name="message" placeholder="Tell us who the trial is for (age, experience, questions)"></textarea>
 
       <button type="submit">Request Free Trial</button>
     </form>
   </div>
 </section>
 <!-- End Free Trial Request -->
+
+ </main>
 
  <!-- jquery -->
 
@@ -380,11 +437,11 @@ src=inertiastl%40gmail.com
 	$(document).ready(function(){
 
       $(".ham-burger, .nav ul li a").click(function(){
-       
-        $(".nav").toggleClass("open")
-
+        $(".nav").toggleClass("open");
         $(".ham-burger").toggleClass("active");
-      })      
+        const isOpen = $(".ham-burger").hasClass("active");
+        $(".ham-burger").attr("aria-expanded", isOpen ? "true" : "false");
+      })
       $(".accordian-container").click(function(){
       	$(".accordian-container").children(".body").slideUp();
       	$(".accordian-container").removeClass("active")
