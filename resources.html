@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Inertia Martial Arts &amp; Fitness</title>
+  <meta name="description" content="Training resources for Inertia Martial Arts students — forms, videos, patch instructions, and more.">
+  <link rel="canonical" href="https://inertiastl.com/resources.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #0A0A0A; color: #F5F5F5; -webkit-font-smoothing: antialiased; }
+    a { color: #C0392B; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    :root {
+      --red: #C0392B; --red-hover: #96281B; --red-glow: rgba(192,57,43,0.35);
+      --black: #0A0A0A; --white: #F5F5F5;
+      --grey-100: #141414; --grey-200: #1E1E1E; --grey-300: #2C2C2C;
+      --grey-500: #7A7A7A; --grey-700: #444444;
+      --radius: 4px;
+    }
+
+    /* ── NAV ── */
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; border-bottom: 1px solid var(--grey-200); background: var(--black); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; color: var(--white); display: flex; align-items: center; gap: 10px; line-height: 1.2; }
+    .nav-logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,245,245,0.7); transition: color 200ms; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); text-decoration: none; }
+    .nav-links a.active { color: var(--red); }
+    .nav-cta { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--red); color: var(--white); padding: 10px 20px; border-radius: var(--radius); transition: background 200ms; }
+    .nav-cta:hover { background: var(--red-hover); text-decoration: none; }
+
+    /* ── PAGE HERO ── */
+    .page-hero { padding: 72px 40px 56px; border-bottom: 1px solid var(--grey-200); }
+    .page-hero .container { max-width: 1160px; margin: 0 auto; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .page-hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(36px, 5vw, 56px); font-weight: 700; color: var(--white); line-height: 1.05; margin-bottom: 14px; }
+    .page-hero p { font-size: 16px; color: var(--grey-500); line-height: 1.7; max-width: 600px; }
+
+    /* ── MAIN LAYOUT ── */
+    .main { max-width: 1160px; margin: 0 auto; padding: 64px 40px 100px; }
+
+    /* ── SECTION TITLES ── */
+    .res-section { margin-bottom: 72px; }
+    .res-section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--grey-200); }
+    .res-section-icon { width: 40px; height: 40px; background: rgba(192,57,43,0.1); border: 1px solid rgba(192,57,43,0.4); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .res-section-title { font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--white); }
+
+    /* ── RESOURCE CARDS ── */
+    .res-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .res-card { background: var(--grey-100); border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; transition: border-color 250ms, transform 250ms; }
+    .res-card:hover { border-color: var(--grey-300); transform: translateY(-2px); }
+    .res-card-type { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+    .res-card-title { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
+    .res-card-desc { font-size: 13px; color: var(--grey-500); line-height: 1.65; margin-bottom: 20px; flex: 1; }
+    .res-card-action { display: inline-flex; align-items: center; gap: 7px; font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--white); background: var(--red); border-radius: var(--radius); padding: 10px 18px; transition: background 200ms; align-self: flex-start; text-decoration: none; }
+    .res-card-action:hover { background: var(--red-hover); text-decoration: none; }
+    .res-card-action.secondary { background: transparent; border: 1px solid var(--grey-300); color: var(--grey-500); }
+    .res-card-action.secondary:hover { border-color: var(--white); color: var(--white); background: transparent; }
+
+    /* ── COMING SOON BADGE ── */
+    .coming-soon-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-700); background: var(--grey-200); border: 1px solid var(--grey-300); border-radius: var(--radius); padding: 5px 10px; }
+
+    /* ── VIDEO PLACEHOLDER ── */
+    .video-placeholder { background: var(--grey-200); border: 1px dashed var(--grey-300); border-radius: var(--radius); aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--grey-700); }
+    .video-placeholder svg { opacity: 0.4; }
+    .video-placeholder p { font-size: 13px; letter-spacing: 0.06em; }
+
+    /* ── FOOTER ── */
+    .footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--grey-200); font-size: 12px; color: var(--grey-700); }
+    .footer a { color: var(--grey-700); }
+    .footer a:hover { color: var(--white); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .page-hero { padding: 48px 20px 40px; }
+      .main { padding: 40px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo" aria-label="Inertia Martial Arts home">
+      <img src="images/logo.png" alt="Inertia Martial Arts logo" onerror="this.style.display='none'">
+      INERTIA MARTIAL<br>ARTS &amp; FITNESS
+    </a>
+    <div class="nav-links">
+      <a href="/#programs">Programs</a>
+      <a href="/#schedule">Schedule</a>
+      <a href="/#about">About</a>
+      <a href="/#tournaments">Tournaments</a>
+      <a href="/resources.html" class="active">Resources</a>
+    </div>
+    <a href="/#free-trial" class="nav-cta">Free Trial</a>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Student Materials</p>
+      <h1>Resources</h1>
+      <p>Everything you need to study, practice, and grow between classes. Forms, instructional videos, and official documents — all in one place.</p>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ── UNIFORM & EQUIPMENT ── -->
+    <section class="res-section" aria-labelledby="uniform-heading">
+      <div class="res-section-header">
+        <div class="res-section-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#C0392B" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M2 17l10 5 10-5" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12l10 5 10-5" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="res-section-title" id="uniform-heading">Uniform &amp; Equipment</h2>
+      </div>
+      <div class="res-grid">
+
+        <!-- Dobak Patch Instructions -->
+        <div class="res-card">
+          <div class="res-card-type">PDF · Official Instructions</div>
+          <h3 class="res-card-title">Dobak Patch Placement Instructions</h3>
+          <p class="res-card-desc">Official guide for correctly placing patches on your dobok (uniform). Includes placement diagrams and position specifications for all Chung Do Kwan Association patches.</p>
+          <a href="PatchInstructions.pdf" target="_blank" rel="noopener" class="res-card-action" download="InertiaMA_PatchInstructions.pdf">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="7 10 12 15 17 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Download PDF
+          </a>
+        </div>
+
+        <!-- Uniform guide placeholder -->
+        <div class="res-card">
+          <div class="res-card-type">Guide · Coming Soon</div>
+          <h3 class="res-card-title">Dobok Care &amp; Maintenance</h3>
+          <p class="res-card-desc">Tips for washing, pressing, and maintaining your dobok so it stays crisp and presentation-ready for class and competition.</p>
+          <span class="coming-soon-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Coming Soon
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── BASICS ── -->
+    <section class="res-section" aria-labelledby="basics-heading">
+      <div class="res-section-header">
+        <div class="res-section-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="#C0392B" stroke-width="1.6"/>
+            <path d="M12 8v4l3 3" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2 class="res-section-title" id="basics-heading">Basics &amp; Fundamentals</h2>
+      </div>
+
+      <div class="res-grid">
+        <!-- Stances -->
+        <div class="res-card">
+          <div class="res-card-type">Video · Coming Soon</div>
+          <h3 class="res-card-title">Stances (Seogi)</h3>
+          <p class="res-card-desc">Foundational stances including Naranhi Seogi, Juchum Seogi, Apseogi, and Dwit Seogi — with key points on weight distribution and alignment.</p>
+          <div class="video-placeholder" aria-label="Video coming soon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <p>Video Coming Soon</p>
+          </div>
+        </div>
+
+        <!-- Blocks -->
+        <div class="res-card">
+          <div class="res-card-type">Video · Coming Soon</div>
+          <h3 class="res-card-title">Blocks (Makgi)</h3>
+          <p class="res-card-desc">Core blocking techniques including Low Block, Middle Block, High Block, and Knife-Hand Block. Drill breakdowns from slow to full speed.</p>
+          <div class="video-placeholder" aria-label="Video coming soon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <p>Video Coming Soon</p>
+          </div>
+        </div>
+
+        <!-- Kicks -->
+        <div class="res-card">
+          <div class="res-card-type">Video · Coming Soon</div>
+          <h3 class="res-card-title">Kicks (Chagi)</h3>
+          <p class="res-card-desc">Essential kicks — front kick, roundhouse, side kick, and back kick — broken down step by step with chamber, extension, and retraction cues.</p>
+          <div class="video-placeholder" aria-label="Video coming soon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <p>Video Coming Soon</p>
+          </div>
+        </div>
+
+        <!-- Korean Terminology -->
+        <div class="res-card">
+          <div class="res-card-type">Reference · Coming Soon</div>
+          <h3 class="res-card-title">Korean Terminology</h3>
+          <p class="res-card-desc">A reference sheet of essential Korean terms used in class — commands, techniques, counts, and titles — with pronunciation guides.</p>
+          <span class="coming-soon-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Coming Soon
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FORMS (POOMSAE) ── -->
+    <section class="res-section" aria-labelledby="forms-heading">
+      <div class="res-section-header">
+        <div class="res-section-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z" stroke="#C0392B" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="res-section-title" id="forms-heading">Forms (Poomsae)</h2>
+      </div>
+
+      <p style="font-size:14px;color:var(--grey-500);margin-bottom:28px;line-height:1.75;">Forms are pre-arranged sequences of techniques performed solo. Each form corresponds to a rank level. Video walkthroughs will be added as they are recorded. Ask your instructor which form applies to your current rank.</p>
+
+      <div class="res-grid">
+        <!-- Taegeuk 1 -->
+        <div class="res-card">
+          <div class="res-card-type">Form · White–Yellow Belt</div>
+          <h3 class="res-card-title">Taegeuk Il Jang</h3>
+          <p class="res-card-desc">The first form, representing the trigram ☰ (Geon — Heaven and Yang). Introduces basic walking stance, low block, and middle punch.</p>
+          <div class="video-placeholder" aria-label="Video coming soon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <p>Video Coming Soon</p>
+          </div>
+        </div>
+
+        <!-- Taegeuk 2 -->
+        <div class="res-card">
+          <div class="res-card-type">Form · Yellow Belt</div>
+          <h3 class="res-card-title">Taegeuk Yi Jang</h3>
+          <p class="res-card-desc">Represents ☱ (Tae — Joy). Builds on Taegeuk 1 with added front kicks and knife-hand strikes.</p>
+          <div class="video-placeholder" aria-label="Video coming soon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <p>Video Coming Soon</p>
+          </div>
+        </div>
+
+        <!-- Taegeuk 3 -->
+        <div class="res-card">
+          <div class="res-card-type">Form · Green Belt</div>
+          <h3 class="res-card-title">Taegeuk Sam Jang</h3>
+          <p class="res-card-desc">Represents ☲ (Ri — Fire). Introduces high-section blocks and turning back-fist strikes.</p>
+          <div class="video-placeholder" aria-label="Video coming soon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <p>Video Coming Soon</p>
+          </div>
+        </div>
+
+        <!-- More forms placeholder -->
+        <div class="res-card" style="border-style:dashed;">
+          <div class="res-card-type">Forms 4–8 &amp; Black Belt</div>
+          <h3 class="res-card-title">Additional Forms</h3>
+          <p class="res-card-desc">Taegeuk Sa–Pal Jang, Koryo, Keumgang, and advanced black belt forms will be added progressively. Ask your instructor for rank-specific guidance.</p>
+          <span class="coming-soon-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Adding Progressively
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXTERNAL LINKS ── -->
+    <section class="res-section" aria-labelledby="external-heading">
+      <div class="res-section-header">
+        <div class="res-section-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+            <polyline points="15 3 21 3 21 9" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="10" y1="14" x2="21" y2="3" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2 class="res-section-title" id="external-heading">External Resources</h2>
+      </div>
+      <div class="res-grid">
+
+        <div class="res-card">
+          <div class="res-card-type">External · Tournament</div>
+          <h3 class="res-card-title">St. Louis Gateway Championships</h3>
+          <p class="res-card-desc">Master Blevins' annual CDA-sanctioned tournament. Registration, rules, and schedule information.</p>
+          <a href="https://bluewavestl.com/st-louis-gateway-championships/" target="_blank" rel="noopener" class="res-card-action">
+            Visit Page →
+          </a>
+        </div>
+
+        <div class="res-card">
+          <div class="res-card-type">External · Association</div>
+          <h3 class="res-card-title">Chung Do Kwan Association</h3>
+          <p class="res-card-desc">The official CDA website — events calendar, rank registration, and association news.</p>
+          <a href="https://chungdokwan.org" target="_blank" rel="noopener" class="res-card-action">
+            Visit CDA →
+          </a>
+        </div>
+
+        <div class="res-card">
+          <div class="res-card-type">External · Partner School</div>
+          <h3 class="res-card-title">Blue Wave Martial Arts &amp; Fitness</h3>
+          <p class="res-card-desc">Master David Blevins' school in Flint Hill, MO — Inertia MA's lineage school and competition partner.</p>
+          <a href="https://bluewavestl.com" target="_blank" rel="noopener" class="res-card-action">
+            Visit Blue Wave →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Inertia Martial Arts and Fitness. &nbsp;·&nbsp;
+      <a href="/">Home</a> &nbsp;·&nbsp;
+      <a href="/resources.html">Resources</a> &nbsp;·&nbsp;
+      <a href="/privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
