@@ -1,44 +1,2024 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Inertia Martial Arts & Fitness | Chung Do Kwan Taekwondo in Chesterfield, MO</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Inertia Martial Arts & Fitness in Chesterfield, MO offers Chung Do Kwan Taekwondo classes for all ages, a free trial week, and family-friendly training.">
-	<meta name="keywords" content="Chung Do Kwan, Taekwondo, martial arts, Chesterfield MO, kids martial arts, adult taekwondo, self defense, Inertia Martial Arts">
-	<meta name="robots" content="index,follow">
-	<link rel="canonical" href="https://inertiastl.com/">
-	<meta name="theme-color" content="#0b0d12">
-	<meta property="og:title" content="Inertia Martial Arts & Fitness">
-	<meta property="og:description" content="Chung Do Kwan Taekwondo classes for all ages in Chesterfield, MO. Free trial week available.">
-	<meta property="og:type" content="website">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:site_name" content="Inertia Martial Arts & Fitness">
-	<meta property="og:url" content="https://inertiastl.com/">
-	<meta property="og:image" content="https://inertiastl.com/images/gallery2.jpg">
-	<meta property="og:image:alt" content="Taekwondo students training at Inertia Martial Arts in Chesterfield, MO">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Inertia Martial Arts & Fitness | Taekwondo in Chesterfield, MO">
-	<meta name="twitter:description" content="Chung Do Kwan Taekwondo for all ages in Chesterfield, MO. Free trial week. No contracts.">
-	<meta name="twitter:image" content="https://inertiastl.com/images/gallery2.jpg">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inertia Martial Arts & Fitness | Taekwondo in Chesterfield, MO</title>
+  <meta name="description" content="Chung Do Kwan Taekwondo for all ages in Chesterfield, MO. Free trial week. No contracts. Kids, teen, adult, and competition classes.">
+  <meta name="keywords" content="Taekwondo Chesterfield MO, Martial Arts Chesterfield, Chung Do Kwan Missouri, kids martial arts Chesterfield, adult taekwondo St Louis">
+  <meta property="og:title" content="Inertia Martial Arts & Fitness | Taekwondo in Chesterfield, MO">
+  <meta property="og:description" content="Chung Do Kwan Taekwondo for all ages in Chesterfield, MO. Free trial week. No contracts.">
+  <meta property="og:url" content="https://inertiastl.com/">
+  <meta property="og:image" content="https://inertiastl.com/images/gallery2.jpg">
+  <link rel="canonical" href="https://inertiastl.com/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@200;300&display=swap" rel="stylesheet">
+
   <style>
-    .wow:first-child {
-      visibility: hidden;
+    /* ─── RESET & ROOT ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0A0A0A;
+      color: #F5F5F5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
+    :root {
+      --black:       #0A0A0A;
+      --white:       #F5F5F5;
+      --red:         #C0392B;
+      --red-hover:   #96281B;
+      --red-glow:    rgba(192,57,43,0.35);
+      --blue:        #1B3A6B;
+      --blue-light:  #2C5F9E;
+      --grey-100:    #141414;
+      --grey-200:    #1E1E1E;
+      --grey-300:    #2C2C2C;
+      --grey-500:    #7A7A7A;
+      --grey-700:    #444444;
+      --transition:  200ms ease;
+      --transition-card: 300ms cubic-bezier(0.25,0.46,0.45,0.94);
+      --radius:      4px;
+      --shadow-card: 0 4px 32px rgba(0,0,0,0.5);
+      --shadow-hover: 0 12px 48px var(--red-glow);
+    }
+
+    /* ─── UTILITY ────────────────────────────────────────────────── */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .btn-primary:hover { background: var(--red-hover); transform: translateY(-1px); box-shadow: 0 6px 24px var(--red-glow); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 13px 30px;
+      border: 1.5px solid rgba(245,245,245,0.4);
+      border-radius: var(--radius);
+      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+    }
+    .btn-secondary:hover { border-color: var(--white); background: rgba(245,245,245,0.06); transform: translateY(-1px); }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── NAVBAR ─────────────────────────────────────────────────── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0;
+      transition: background 300ms ease, padding 300ms ease, box-shadow 300ms ease;
+    }
+    #navbar.scrolled {
+      background: rgba(10,10,10,0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 12px 0;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1160px; margin: 0 auto; padding: 0 24px;
+    }
+    .nav-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 0.04em; color: var(--white);
+      display: flex; align-items: center; gap: 10px;
+      line-height: 1.2;
+    }
+    .nav-logo-text { color: var(--white); }
+    .nav-logo-img {
+      width: 44px; height: 44px; border-radius: 50%;
+      object-fit: cover; flex-shrink: 0;
+      filter: drop-shadow(0 0 8px rgba(192,57,43,0.4));
+    }
+    .logo-mark {
+      width: 44px; height: 44px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: rgba(245,245,245,0.75);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #mobile-menu {
+      display: none; position: fixed; top: 65px; left: 0; right: 0;
+      background: rgba(10,10,10,0.98); backdrop-filter: blur(16px);
+      padding: 24px; border-top: 1px solid var(--grey-300); z-index: 999;
+      flex-direction: column; gap: 0;
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a {
+      font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 500;
+      color: var(--white); padding: 14px 0; border-bottom: 1px solid var(--grey-300);
+      letter-spacing: 0.06em;
+    }
+    #mobile-menu .btn-primary { margin-top: 20px; text-align: center; justify-content: center; }
+
+    /* ─── HERO ───────────────────────────────────────────────────── */
+    #hero {
+      position: relative; height: 100vh; min-height: 620px;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .hero-slides { position: absolute; inset: 0; }
+    .hero-slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0; transition: opacity 1.2s ease;
+    }
+    .hero-slide.active { opacity: 1; }
+    .hero-slide:nth-child(1) { background-image: url('https://inertiastl.com/images/home.jpg'); }
+    .hero-slide:nth-child(2) { background-image: url('https://inertiastl.com/images/gallery2.jpg'); }
+    .hero-slide:nth-child(3) { background-image: url('https://inertiastl.com/images/gallery1.jpeg'); }
+    .hero-slide:nth-child(4) { background-image: url('https://inertiastl.com/images/gallery3.jpg'); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(10,10,10,0.92) 0%,
+        rgba(10,10,10,0.7) 50%,
+        rgba(10,10,10,0.4) 100%
+      );
+    }
+    .hero-overlay-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+      background: linear-gradient(to top, var(--black), transparent);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1160px; margin: 0 auto; padding: 0 24px;
+      padding-top: 80px;
+    }
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow-line { width: 40px; height: 2px; background: var(--red); }
+    .hero-eyebrow span {
+      font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,245,245,0.6);
+    }
+    .hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(48px, 8vw, 88px);
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      max-width: 700px;
+      margin-bottom: 20px;
+    }
+    .hero-title .accent { color: var(--red); }
+    .hero-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px; font-weight: 300; line-height: 1.7;
+      color: rgba(245,245,245,0.65);
+      max-width: 440px; margin-bottom: 40px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-scroll-hint {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(245,245,245,0.35); font-size: 11px; letter-spacing: 0.12em;
+      text-transform: uppercase; z-index: 2;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(245,245,245,0.35));
+      animation: scrollPulse 2s ease infinite;
+    }
+    @keyframes scrollPulse { 0%,100%{opacity:0.3;transform:scaleY(0.7)} 50%{opacity:1;transform:scaleY(1)} }
+
+    /* Slide dots */
+    .slide-dots {
+      position: absolute; bottom: 32px; right: 32px; z-index: 3;
+      display: flex; gap: 8px;
+    }
+    .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(245,245,245,0.3); border: none;
+      transition: background var(--transition), transform var(--transition);
+      cursor: pointer;
+    }
+    .dot.active { background: var(--red); transform: scale(1.4); }
+
+    /* ─── TRUST BAR ──────────────────────────────────────────────── */
+    #trust {
+      background-color: var(--red);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104' viewBox='0 0 60 104'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1'%3E%3Cpolygon points='30,2 58,17 58,47 30,62 2,47 2,17'/%3E%3Cline x1='30' y1='2' x2='30' y2='62'/%3E%3Cline x1='2' y1='17' x2='58' y2='47'/%3E%3Cline x1='58' y1='17' x2='2' y2='47'/%3E%3Cpolygon points='30,42 58,57 58,87 30,102 2,87 2,57'/%3E%3Cline x1='30' y1='42' x2='30' y2='102'/%3E%3Cline x1='2' y1='57' x2='58' y2='87'/%3E%3Cline x1='58' y1='57' x2='2' y2='87'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 60px 104px;
+      padding: 20px 0;
+      position: relative;
+    }
+    .trust-inner {
+      display: flex; justify-content: center; align-items: center;
+      gap: 0; flex-wrap: wrap;
+      max-width: 1160px; margin: 0 auto; padding: 0 24px;
+    }
+    .trust-stat {
+      display: flex; align-items: center; gap: 14px;
+      padding: 8px 40px;
+    }
+    .trust-stat + .trust-stat { border-left: 1px solid rgba(245,245,245,0.25); }
+    .trust-num {
+      font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700;
+      color: var(--white); line-height: 1;
+    }
+    .trust-label {
+      font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: rgba(245,245,245,0.8); line-height: 1.4;
+    }
+
+    /* ─── PROGRAMS ───────────────────────────────────────────────── */
+    #programs { padding: 100px 0; background: var(--grey-100); }
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 600; line-height: 1.1;
+      color: var(--white); margin-bottom: 16px;
+    }
+    .section-sub {
+      font-family: 'Inter', sans-serif; font-size: 16px;
+      color: var(--grey-500); line-height: 1.7; max-width: 500px; margin: 0 auto;
+    }
+    .program-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    }
+    .program-card {
+      background: var(--grey-200);
+      border: 1px solid var(--grey-300);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform var(--transition-card), box-shadow var(--transition-card), border-color var(--transition-card);
+      cursor: pointer;
+    }
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--red);
+    }
+    .program-img {
+      height: 220px;
+      background-size: cover; background-position: center;
+      position: relative; overflow: hidden;
+    }
+    .program-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(10,10,10,0.85));
+    }
+    .program-img-1 { background-image: url('https://inertiastl.com/images/class1.jpg'), linear-gradient(135deg, #1B3A6B 0%, #0A0A0A 100%); }
+    .program-img-2 { background-image: url('https://inertiastl.com/images/class2.jpg'), linear-gradient(135deg, #C0392B 0%, #0A0A0A 100%); }
+    .program-img-3 { background-image: url('https://inertiastl.com/images/gallery5.jpg'), linear-gradient(135deg, #1B3A6B 0%, #C0392B 100%); }
+    .program-badge {
+      position: absolute; top: 16px; left: 16px; z-index: 1;
+      background: var(--red); color: var(--white);
+      font-family: 'Oswald', sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 2px;
+    }
+    .program-body { padding: 28px; }
+    .program-age {
+      font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+      color: var(--red); letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .program-name {
+      font-family: 'Oswald', sans-serif; font-size: 24px; font-weight: 600;
+      color: var(--white); margin-bottom: 12px; line-height: 1.1;
+    }
+    .program-desc {
+      font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.7;
+      color: var(--grey-500); margin-bottom: 20px;
+    }
+    .program-skills {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+    }
+    .skill-tag {
+      background: rgba(192,57,43,0.12); border: 1px solid rgba(192,57,43,0.25);
+      color: rgba(245,245,245,0.7);
+      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 4px 10px; border-radius: 2px;
+    }
+    .program-link {
+      font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--red);
+      display: flex; align-items: center; gap: 6px;
+      transition: gap var(--transition);
+    }
+    .program-card:hover .program-link { gap: 10px; }
+
+    /* ─── PHILOSOPHY / TENETS (redesigned) ──────────────────────── */
+    #philosophy {
+      padding: 120px 0;
+      background: #040C18;
+      position: relative; overflow: hidden;
+    }
+
+    /* Seigaiha (青海波) wave pattern background */
+    .philosophy-wave-bg {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .philosophy-wave-bg svg {
+      position: absolute; top: 0; left: -60px;
+      width: calc(100% + 120px); height: 100%;
+      animation: seigaiha-drift 40s ease-in-out infinite alternate;
+      opacity: 0.18;
+    }
+    @keyframes seigaiha-drift {
+      0%   { transform: translateX(0) translateY(0); }
+      50%  { transform: translateX(30px) translateY(-10px); }
+      100% { transform: translateX(-20px) translateY(6px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .philosophy-wave-bg svg { animation: none; }
+    }
+
+    /* Header area: 靑濤館 (청도관) etymology */
+    .philosophy-header { text-align: center; margin-bottom: 80px; position: relative; z-index: 1; }
+    .cdkwan-script {
+      display: flex; align-items: flex-start; justify-content: center; gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .cdkwan-char-group {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+    }
+    .cdkwan-hanja {
+      font-family: 'Noto Serif SC', 'Noto Serif CJK SC', serif;
+      font-size: clamp(48px, 6vw, 72px);
+      line-height: 1;
+      color: var(--white);
+      font-weight: 200;
+      letter-spacing: -0.02em;
+      text-shadow: 0 0 40px rgba(27,58,107,0.8);
+      transition: color 300ms, text-shadow 300ms;
+    }
+    .cdkwan-hanja:hover {
+      color: var(--red);
+      text-shadow: 0 0 40px rgba(192,57,43,0.6);
+    }
+    .cdkwan-romanji {
+      font-family: 'Oswald', sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--red);
+    }
+    .cdkwan-meaning {
+      font-family: 'Inter', sans-serif; font-size: 10px;
+      color: var(--grey-500); letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .cdkwan-plus {
+      font-size: 20px; color: var(--grey-700); padding-top: 20px;
+    }
+    .cdkwan-equals {
+      font-family: 'Inter', sans-serif; font-size: 14px;
+      color: var(--grey-500); letter-spacing: 0.06em; margin-top: 4px;
+      font-style: italic;
+    }
+    .cdkwan-translation {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(16px, 2.5vw, 22px); font-weight: 400;
+      color: rgba(245,245,245,0.6);
+      letter-spacing: 0.06em;
+      border-top: 1px solid var(--grey-300);
+      padding-top: 24px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .cdkwan-translation em { color: var(--white); font-style: normal; }
+
+    /* Two tenets row */
+    .tenets-row {
+      display: flex; align-items: stretch; justify-content: center;
+      gap: 0; max-width: 760px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .tenet-divider-line {
+      width: 1px; background: var(--grey-300);
+      align-self: stretch; flex-shrink: 0;
+    }
+    .tenet-card {
+      flex: 1; text-align: center; padding: 48px 40px;
+      transition: background 400ms;
+      border: 1px solid var(--grey-300);
+      position: relative; overflow: hidden;
+    }
+    .tenet-card:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+    .tenet-card:last-child  { border-radius: 0 var(--radius) var(--radius) 0; border-left: none; }
+    .tenet-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(27,58,107,0.15) 0%, transparent 60%);
+      opacity: 0; transition: opacity 400ms;
+    }
+    .tenet-card:hover { background: rgba(27,58,107,0.12); }
+    .tenet-card:hover::before { opacity: 1; }
+    .tenet-kanji {
+      font-family: 'Noto Serif SC', 'Noto Serif CJK SC', serif;
+      font-size: clamp(72px, 10vw, 120px);
+      line-height: 1;
+      color: var(--white);
+      font-weight: 200;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 40px rgba(27,58,107,0.5);
+      transition: text-shadow 400ms, transform 400ms;
+      display: block;
+    }
+    .tenet-card:hover .tenet-kanji {
+      text-shadow: 0 4px 60px rgba(192,57,43,0.4);
+      transform: scale(1.04);
+    }
+    .tenet-romanji {
+      font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 10px;
+    }
+    .tenet-english {
+      font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 500;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .tenet-meaning {
+      font-family: 'Inter', sans-serif; font-size: 13px;
+      color: var(--grey-500); line-height: 1.7;
+      max-width: 220px; margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .tenets-row { flex-direction: column; max-width: 360px; }
+      .tenet-divider-line { width: 100%; height: 1px; }
+      .tenet-card:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+      .tenet-card:last-child  { border-radius: 0 0 var(--radius) var(--radius); border-left: 1px solid var(--grey-300); border-top: none; }
+      .cdkwan-script { gap: 8px; }
+      .cdkwan-plus { font-size: 16px; padding-top: 14px; }
+    }
+
+    /* ─── CTA BLOCK ──────────────────────────────────────────────── */
+    .cta-block {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta-block.red { background: var(--red); }
+    .cta-block.blue { background: var(--blue); }
+    .cta-block.dark { background: var(--grey-100); }
+    .cta-block-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700; color: var(--white);
+      margin-bottom: 12px; line-height: 1.1;
+    }
+    .cta-block-sub {
+      font-family: 'Inter', sans-serif; font-size: 16px;
+      color: rgba(245,245,245,0.75); margin-bottom: 32px;
+    }
+    .cta-block.red .btn-primary { background: var(--black); color: var(--white); }
+    .cta-block.red .btn-primary:hover { background: rgba(0,0,0,0.8); }
+    .cta-badges {
+      display: flex; justify-content: center; align-items: center;
+      gap: 32px; margin-top: 28px; flex-wrap: wrap;
+    }
+    .cta-badge {
+      display: flex; align-items: center; gap: 8px;
+      font-family: 'Inter', sans-serif; font-size: 13px;
+      color: rgba(245,245,245,0.7);
+    }
+    .cta-badge-icon { color: var(--white); font-size: 14px; }
+
+    /* ─── SCHEDULE ───────────────────────────────────────────────── */
+    #schedule { padding: 100px 0; background: var(--grey-100); }
+    .schedule-filters {
+      display: flex; gap: 8px; margin-bottom: 40px; flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 8px 18px; border-radius: 2px;
+      border: 1px solid var(--grey-300);
+      color: var(--grey-500); background: transparent;
+      transition: all var(--transition); cursor: pointer;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--red); border-color: var(--red); color: var(--white);
+    }
+    .schedule-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px;
+    }
+    .schedule-day {}
+    .day-header {
+      font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-500);
+      padding-bottom: 12px; border-bottom: 1px solid var(--grey-300);
+      margin-bottom: 12px; text-align: center;
+    }
+    .schedule-slot {
+      background: var(--grey-200);
+      border: 1px solid var(--grey-300);
+      border-radius: var(--radius);
+      padding: 10px 12px; margin-bottom: 8px;
+      cursor: default;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .schedule-slot:hover { border-color: var(--red); transform: translateY(-2px); }
+    .slot-time {
+      font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 500;
+      color: var(--red); margin-bottom: 3px;
+    }
+    .slot-class {
+      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500;
+      color: var(--white); line-height: 1.3;
+    }
+    .slot-level {
+      display: inline-block; margin-top: 5px;
+      font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 2px 6px; border-radius: 2px;
+    }
+    .level-beg { background: rgba(192,57,43,0.2); color: var(--red); }
+    .level-int { background: rgba(27,58,107,0.3); color: var(--blue-light); }
+    .level-adv { background: rgba(245,245,245,0.08); color: var(--grey-500); }
+    .level-all { background: rgba(192,57,43,0.15); color: rgba(245,245,245,0.6); }
+
+    /* ─── GALLERY ────────────────────────────────────────────────── */
+    #gallery { padding: 100px 0; background: var(--black); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 240px 240px;
+      gap: 8px;
+    }
+    .gallery-item {
+      background-size: cover; background-position: center;
+      border-radius: var(--radius); overflow: hidden; position: relative;
+      cursor: pointer;
+    }
+    .gallery-item::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(10,10,10,0.3);
+      transition: background var(--transition);
+    }
+    .gallery-item:hover::after { background: rgba(192,57,43,0.2); }
+    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; background-image: url('https://inertiastl.com/images/gallery1.jpeg'), linear-gradient(135deg,#1B3A6B,#0A0A0A); }
+    .gallery-item:nth-child(2) { background-image: url('https://inertiastl.com/images/gallery2.jpg'), linear-gradient(135deg,#C0392B,#0A0A0A); }
+    .gallery-item:nth-child(3) { background-image: url('https://inertiastl.com/images/gallery3.jpg'), linear-gradient(135deg,#1B3A6B,#C0392B); }
+    .gallery-item:nth-child(4) { background-image: url('https://inertiastl.com/images/gallery4.jpg'), linear-gradient(135deg,#0A0A0A,#1B3A6B); }
+    .gallery-item:nth-child(5) { background-image: url('https://inertiastl.com/images/gallery4.jpeg'), linear-gradient(135deg,#C0392B,#1B3A6B); }
+
+    /* ─── ABOUT ──────────────────────────────────────────────────── */
+    #about { padding: 100px 0; background: var(--grey-100); }
+    .about-inner {
+      display: grid; grid-template-columns: 420px 1fr; gap: 80px; align-items: start;
+    }
+    .about-photo {
+      position: relative;
+    }
+    .about-photo-img {
+      width: 100%; aspect-ratio: 3/4;
+      background-image: url('https://inertiastl.com/images/about1.jpg'), linear-gradient(160deg,#1B3A6B 0%,#0A0A0A 100%);
+      background-size: cover; background-position: center top;
+      border-radius: var(--radius);
+    }
+    .about-photo-badge {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--red); padding: 20px 24px; border-radius: var(--radius);
+      text-align: center;
+    }
+    .badge-num {
+      font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700;
+      color: var(--white); line-height: 1;
+    }
+    .badge-text {
+      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500;
+      color: rgba(245,245,245,0.75); text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .about-content {}
+    .about-name {
+      font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 600;
+      color: var(--white); margin-bottom: 6px;
+    }
+    .about-title {
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+      color: var(--red); letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .about-bio {
+      font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.8;
+      color: var(--grey-500); margin-bottom: 32px;
+    }
+    .about-bio p + p { margin-top: 14px; }
+    .credentials {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 36px;
+    }
+    .credential {
+      background: var(--grey-200); border: 1px solid var(--grey-300);
+      border-radius: var(--radius); padding: 14px 18px;
+    }
+    .cred-label {
+      font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--red);
+      margin-bottom: 4px;
+    }
+    .cred-value {
+      font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 500;
+      color: var(--white);
+    }
+
+    /* ─── LINEAGE (redesigned) ─────────────────────────────────── */
+    #lineage { padding: 100px 0; background: var(--black); }
+    .lineage-heading { text-align: center; margin-bottom: 64px; }
+    .lineage-heading .section-label { margin-bottom: 12px; }
+    .lineage-heading .section-title { font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--white); }
+
+    .lineage-chain {
+      display: flex; align-items: flex-start; justify-content: center;
+      position: relative;
+    }
+    .lineage-node-wrap {
+      display: flex; flex-direction: column; align-items: center;
+      flex: 1; max-width: 180px;
+      cursor: default;
+      transition: transform 300ms ease;
+      padding: 0 4px;
+    }
+    .lineage-node-wrap:hover { transform: translateY(-4px); }
+
+    .lineage-photo-circle {
+      width: 96px; height: 96px; border-radius: 50%;
+      border: 3px solid var(--grey-300);
+      overflow: hidden; background: var(--grey-200);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 400ms ease, box-shadow 400ms ease;
+      position: relative; z-index: 1;
+      flex-shrink: 0;
+    }
+    .lineage-photo-circle img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    }
+    .lineage-monogram {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px; font-weight: 700; color: var(--red); letter-spacing: 0.05em;
+    }
+    .lineage-node-wrap.active .lineage-photo-circle,
+    .lineage-node-wrap:hover .lineage-photo-circle {
+      border-color: var(--red);
+      box-shadow: 0 0 28px rgba(192,57,43,0.55), 0 0 0 6px rgba(192,57,43,0.1);
+    }
+
+    .lineage-connector {
+      flex: 1; height: 3px;
+      background: var(--grey-300);
+      align-self: center;
+      margin-bottom: 80px;
+      max-width: 80px; min-width: 32px;
+      position: relative; overflow: hidden;
+    }
+    .lineage-connector::after {
+      content: ''; position: absolute; left: 0; top: 0;
+      width: 0; height: 100%;
+      background: linear-gradient(90deg, var(--red), rgba(192,57,43,0.7));
+      transition: width 600ms ease;
+    }
+    .lineage-connector.active::after { width: 100%; }
+
+    .lineage-info { margin-top: 18px; text-align: center; padding: 0 8px; }
+    .lineage-badge {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--red);
+      border: 1px solid rgba(192,57,43,0.5);
+      border-radius: 2px; padding: 2px 8px; margin-bottom: 8px;
+    }
+    .lineage-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px; font-weight: 600;
+      color: var(--white); margin-bottom: 4px; line-height: 1.2;
+    }
+    .lineage-rank {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 600;
+      color: var(--red); margin-bottom: 4px;
+    }
+    .lineage-detail {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; color: var(--grey-500);
+      line-height: 1.5; max-width: 140px; margin: 0 auto;
+    }
+    .lineage-node-wrap.is-us .lineage-photo-circle {
+      border-color: var(--red);
+      background: rgba(192,57,43,0.08);
+    }
+    .lineage-node-wrap.is-us .lineage-name { color: var(--red); }
+
+    @media (max-width: 768px) {
+      .lineage-chain { flex-direction: column; align-items: center; gap: 0; }
+      .lineage-connector {
+        width: 3px; height: 36px; margin-bottom: 0; max-width: none; min-width: unset;
+        align-self: auto;
+      }
+      .lineage-connector::after {
+        left: 0; top: 0; width: 100%; height: 0;
+        transition: height 600ms ease;
+      }
+      .lineage-connector.active::after { height: 100%; }
+      .lineage-node-wrap { max-width: 260px; }
+    }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────────────── */
+    #testimonials { padding: 100px 0; background: var(--grey-100); overflow: hidden; }
+    .testimonials-track {
+      display: flex; gap: 24px;
+      animation: scrollTestimonials 28s linear infinite;
+      width: max-content;
+    }
+    .testimonials-track:hover { animation-play-state: paused; }
+    @keyframes scrollTestimonials {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonial-card {
+      background: var(--grey-200); border: 1px solid var(--grey-300);
+      border-radius: var(--radius); padding: 28px 32px;
+      min-width: 340px; max-width: 340px;
+      transition: border-color var(--transition);
+    }
+    .testimonial-card:hover { border-color: var(--red); }
+    .stars {
+      color: var(--red); font-size: 14px; letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+    .testimonial-quote {
+      font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.8;
+      color: var(--grey-500); margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial-footer { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--grey-300); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 600;
+      color: var(--red);
+    }
+    .testimonial-name {
+      font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 500;
+      color: var(--white);
+    }
+    .testimonial-belt {
+      font-family: 'Inter', sans-serif; font-size: 11px; color: var(--grey-500);
+    }
+
+    /* ─── FREE TRIAL FORM ────────────────────────────────────────── */
+    #free-trial { padding: 100px 0; background: var(--black); }
+    .trial-inner {
+      display: grid; grid-template-columns: 1fr 480px; gap: 80px; align-items: start;
+    }
+    .trial-left {}
+    .trial-pitch {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(32px,4vw,48px);
+      font-weight: 700; color: var(--white); line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .trial-pitch .red { color: var(--red); }
+    .trial-desc {
+      font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.8;
+      color: var(--grey-500); margin-bottom: 40px;
+    }
+    .trust-checks { display: flex; flex-direction: column; gap: 14px; }
+    .trust-check {
+      display: flex; align-items: flex-start; gap: 14px;
+      font-family: 'Inter', sans-serif; font-size: 14px; color: var(--grey-500);
+      line-height: 1.5;
+    }
+    .check-icon {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.35);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px; font-size: 11px; color: var(--red);
+    }
+    .pricing-note {
+      margin-top: 36px; padding: 20px 24px;
+      background: var(--grey-100); border-radius: var(--radius);
+      border-left: 3px solid var(--red);
+    }
+    .pricing-note-top {
+      font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600;
+      color: var(--white); margin-bottom: 4px;
+    }
+    .pricing-note-sub {
+      font-family: 'Inter', sans-serif; font-size: 13px; color: var(--grey-500);
+    }
+    /* Form */
+    .trial-form-wrap {
+      background: var(--grey-100); border: 1px solid var(--grey-300);
+      border-radius: var(--radius); padding: 40px;
+    }
+    .form-title {
+      font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600;
+      color: var(--white); margin-bottom: 28px;
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block; font-family: 'Inter', sans-serif; font-size: 12px;
+      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 8px;
+    }
+    .form-control {
+      width: 100%; background: var(--grey-200); border: 1px solid var(--grey-300);
+      border-radius: var(--radius); padding: 12px 16px;
+      font-family: 'Inter', sans-serif; font-size: 14px; color: var(--white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form-control::placeholder { color: var(--grey-700); }
+    .form-control:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(192,57,43,0.15); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    select.form-control { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23444' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+    .form-submit { width: 100%; padding: 16px; font-size: 16px; }
+    .form-disclaimer {
+      text-align: center; margin-top: 14px;
+      font-family: 'Inter', sans-serif; font-size: 11px; color: var(--grey-700);
+    }
+    .form-success {
+      display: none; text-align: center; padding: 32px 0;
+    }
+    .success-icon { font-size: 48px; margin-bottom: 16px; }
+    .success-title {
+      font-family: 'Oswald', sans-serif; font-size: 24px; color: var(--white);
+      margin-bottom: 8px;
+    }
+    .success-sub { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--grey-500); }
+
+    /* ─── LOCATION ───────────────────────────────────────────────── */
+    #location { padding: 80px 0; background: var(--grey-100); }
+    .location-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .location-map {
+      height: 360px; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--grey-300);
+    }
+    .location-map iframe { width: 100%; height: 100%; border: none; }
+    .location-details {}
+    .location-info { margin-bottom: 32px; }
+    .info-row {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 16px 0; border-bottom: 1px solid var(--grey-300);
+    }
+    .info-row:first-child { padding-top: 0; }
+    .info-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: rgba(192,57,43,0.12); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--red);
+    }
+    .info-label {
+      font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-500);
+      margin-bottom: 3px;
+    }
+    .info-value {
+      font-family: 'Inter', sans-serif; font-size: 14px; color: var(--white);
+      line-height: 1.5;
+    }
+    .social-links { display: flex; gap: 12px; }
+    .social-link {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--grey-200); border: 1px solid var(--grey-300);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--grey-500); font-size: 16px;
+      transition: all var(--transition);
+    }
+    .social-link:hover { background: var(--red); border-color: var(--red); color: var(--white); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    footer {
+      background: var(--grey-100);
+      border-top: 1px solid var(--grey-300);
+      padding: 60px 0 32px;
+    }
+    .footer-inner {
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand {}
+    .footer-logo {
+      font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 700;
+      color: var(--white); margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .footer-logo span { color: var(--red); }
+    .footer-desc {
+      font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.8;
+      color: var(--grey-500); margin-bottom: 20px;
+    }
+    .footer-col {}
+    .footer-col-title {
+      font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; font-family: 'Inter', sans-serif; font-size: 13px;
+      color: rgba(245,245,245,0.55); margin-bottom: 10px;
+      transition: color var(--transition);
+    }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid var(--grey-300); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-copy {
+      font-family: 'Inter', sans-serif; font-size: 12px; color: var(--grey-700);
+    }
+    .footer-tagline {
+      font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--grey-700);
+    }
+
+    /* ─── BACK TO TOP ────────────────────────────────────────────── */
+    #back-top {
+      position: fixed; bottom: 28px; right: 28px; z-index: 500;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--red); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; opacity: 0; pointer-events: none;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    #back-top.visible { opacity: 1; pointer-events: auto; }
+    #back-top:hover { transform: translateY(-3px); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .program-grid { grid-template-columns: 1fr 1fr; }
+      .program-grid .program-card:last-child { grid-column: span 1; max-width: 100%; margin: 0; }
+      .about-inner { grid-template-columns: 320px 1fr; gap: 48px; }
+      .trial-inner { grid-template-columns: 1fr; }
+      .trial-left { order: 2; }
+      .trial-form-wrap { order: 1; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 200px); }
+      .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+      #tournaments .container > .fade-in { grid-template-columns: 1fr !important; padding: 36px 32px !important; }
+      #tournaments .container > .fade-in > div:first-child { margin: 0 auto 24px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .program-grid { grid-template-columns: 1fr; }
+      .program-grid .program-card:last-child { grid-column: span 1; max-width: 100%; }
+      .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+      .tenets-row { flex-direction: column; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-photo { max-width: 340px; margin: 0 auto; }
+      .location-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .trust-stat { padding: 8px 20px; }
+      .form-row { grid-template-columns: 1fr; }
+      .credentials { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr; }
+      .trust-inner { flex-direction: column; gap: 0; }
+      .trust-stat { border-left: none; border-bottom: 1px solid rgba(245,245,245,0.15); width: 100%; justify-content: center; padding: 14px; }
+      .trust-stat:last-child { border-bottom: none; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in, .hero-slide, .testimonials-track { transition: none !important; animation: none !important; }
+      .hero-slide.active { opacity: 1; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ─── SCROLL ANIMATION STATES ────────────────────────────────── */
+    .stagger-1 { transition-delay: 0ms; }
+    .stagger-2 { transition-delay: 100ms; }
+    .stagger-3 { transition-delay: 200ms; }
   </style>
+</head>
+<body>
+
+  <!-- ─── SKIP LINK ────────────────────────────────────────────── -->
+  <a href="#main" style="position:absolute;top:-100px;left:0;background:var(--red);color:white;padding:8px 16px;z-index:9999;border-radius:0 0 4px 0;font-family:'Inter',sans-serif;font-size:13px;" onfocus="this.style.top='0'">Skip to main content</a>
+
+  <!-- ─── NAVBAR ──────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Inertia Martial Arts home">
+        <img class="nav-logo-img" src="images/logo.png" alt="Inertia Martial Arts and Fitness logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="logo-mark" aria-hidden="true" style="display:none;">⬡</div>
+        <span class="nav-logo-text">INERTIA MARTIAL<br>ARTS &amp; FITNESS</span>
+      </a>
+      <div class="nav-links">
+        <a href="#programs" class="nav-link">Programs</a>
+        <a href="#schedule" class="nav-link">Schedule</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#location" class="nav-link">Location</a>
+        <a href="#tournaments" class="nav-link">Tournaments</a>
+        <a href="/resources.html" class="nav-link">Resources</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#free-trial" class="btn-primary">Start Free Trial</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="menu" aria-label="Mobile navigation">
+    <a href="#programs" role="menuitem">Programs</a>
+    <a href="#schedule" role="menuitem">Schedule</a>
+    <a href="#about" role="menuitem">About</a>
+    <a href="#location" role="menuitem">Location</a>
+    <a href="#tournaments" role="menuitem">Tournaments</a>
+    <a href="/resources.html" role="menuitem">Resources</a>
+    <a href="#free-trial" class="btn-primary" role="menuitem">Start Free Trial →</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ─── HERO ─────────────────────────────────────────────────── -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide active"></div>
+        <div class="hero-slide"></div>
+        <div class="hero-slide"></div>
+        <div class="hero-slide"></div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-overlay-bottom" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-in">
+          <div class="hero-eyebrow-line"></div>
+          <span>Chung Do Kwan Taekwondo · Chesterfield, MO</span>
+        </div>
+        <h1 class="hero-title fade-in stagger-1">
+          Train with<br><span class="accent">Inertia</span> Martial Arts
+        </h1>
+        <p class="hero-sub fade-in stagger-2">
+          Train with purpose. Grow in discipline.<br>
+          Transform for life — at any age.
+        </p>
+        <div class="hero-actions fade-in stagger-3">
+          <a href="#free-trial" class="btn-primary">
+            Start Your Free Trial
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#programs" class="btn-secondary">Explore Programs</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+
+      <div class="slide-dots" role="tablist" aria-label="Hero image slides">
+        <button class="dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-slide="0"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2" data-slide="1"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 3" data-slide="2"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-label="Slide 4" data-slide="3"></button>
+      </div>
+    </section>
+
+    <!-- ─── TRUST BAR ──────────────────────────────────────────── -->
+    <section id="trust" aria-label="Key statistics">
+      <div class="trust-inner">
+        <div class="trust-stat">
+          <div>
+            <div class="trust-num" data-count="25" aria-label="25 plus years collective experience">25+</div>
+            <div class="trust-label">Years of Collective<br>Training Experience</div>
+          </div>
+        </div>
+        <div class="trust-stat" style="flex:2;border-left:1px solid rgba(245,245,245,0.25);">
+          <div style="text-align:center;">
+            <div class="trust-num" aria-label="All ages welcome" style="font-size:clamp(28px,4vw,42px);letter-spacing:0.04em;">ALL AGES</div>
+            <div class="trust-label" style="max-width:260px;font-size:12px;line-height:1.6;color:rgba(245,245,245,0.6);">Children · Teens · Adults · Families</div>
+          </div>
+        </div>
+        <div class="trust-stat">
+          <div>
+            <div class="trust-num" aria-label="No contracts">0</div>
+            <div class="trust-label">Contracts.<br>Ever.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROGRAMS ─────────────────────────────────────────────── -->
+    <section id="programs" aria-labelledby="programs-heading" style="padding: 100px 0; background: var(--grey-100);">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label fade-in">What We Teach</p>
+          <h2 class="section-title fade-in stagger-1" id="programs-heading">Built for Every Stage of Life</h2>
+          <p class="section-sub fade-in stagger-2">Authentic Chung Do Kwan Taekwondo instruction for children, teens, adults, and competitive athletes.</p>
+        </div>
+        <div class="program-grid">
+
+          <!-- Kids -->
+          <article class="program-card fade-in stagger-1" tabindex="0" aria-label="Kids Taekwondo program">
+            <div class="program-img program-img-1" role="img" aria-label="Kids Taekwondo training">
+              <div class="program-badge">Ages 5–12</div>
+            </div>
+            <div class="program-body">
+              <div class="program-age">Kids Taekwondo</div>
+              <h3 class="program-name">Youth Program</h3>
+              <p class="program-desc">A structured, fun environment where children build confidence, listening skills, and physical coordination — all within the respected traditions of Chung Do Kwan.</p>
+              <div class="program-skills">
+                <span class="skill-tag">Discipline</span>
+                <span class="skill-tag">Focus</span>
+                <span class="skill-tag">Confidence</span>
+                <span class="skill-tag">Coordination</span>
+              </div>
+              <a href="#free-trial" class="program-link" aria-label="Enroll your child in Kids Taekwondo">
+                Enroll Now
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true"><path d="M1 5h10M7 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Teen/Adult -->
+          <article class="program-card fade-in stagger-2" tabindex="0" aria-label="Teen and Adult Taekwondo program">
+            <div class="program-img program-img-2" role="img" aria-label="Adult Taekwondo sparring">
+              <div class="program-badge">Ages 13+</div>
+            </div>
+            <div class="program-body">
+              <div class="program-age">Teen & Adult Taekwondo</div>
+              <h3 class="program-name">Martial Arts Training</h3>
+              <p class="program-desc">Start with zero experience and train all the way through. Develop real skills, mental strength, and lasting physical fitness through authentic Korean martial arts.</p>
+              <div class="program-skills">
+                <span class="skill-tag">Self-Defense</span>
+                <span class="skill-tag">Forms (Poomsae)</span>
+                <span class="skill-tag">Sparring</span>
+                <span class="skill-tag">Fitness</span>
+              </div>
+              <a href="#free-trial" class="program-link" aria-label="Enroll in Teen and Adult Taekwondo">
+                Enroll Now
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true"><path d="M1 5h10M7 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Girl Scouts & Emerging Leaders -->
+          <article class="program-card fade-in stagger-3" tabindex="0" aria-label="Girl Scouts and emerging leader badge programs">
+            <div class="program-img program-img-3" role="img" aria-label="Badge program for young leaders">
+              <div class="program-badge" style="background:var(--blue);">Badge Programs</div>
+            </div>
+            <div class="program-body">
+              <div class="program-age">Girl Scouts &amp; Emerging Leaders</div>
+              <h3 class="program-name">Leadership Through Martial Arts</h3>
+              <p class="program-desc">Inertia MA partners with the <strong style="color:var(--white);">Girl Scouts of Eastern Missouri</strong> and other youth leadership organizations to deliver badge-earning programs rooted in courage, discipline, and community.</p>
+              <div class="program-skills">
+                <span class="skill-tag">GS Badge Programs</span>
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Self-Confidence</span>
+                <span class="skill-tag">Team Building</span>
+              </div>
+              <a href="https://www.girlscoutsem.org/en/members/for-volunteers/program-partners.html" target="_blank" rel="noopener" class="program-link" aria-label="View Inertia MA on GSEM program partner directory">
+                View Partnership
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true"><path d="M1 5h10M7 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Self-Defense & Kickboxing -->
+          <article class="program-card fade-in stagger-3" tabindex="0" aria-label="Self-Defense Workshops and Kickboxing">
+            <div class="program-img program-img-2" role="img" aria-label="Self-defense and kickboxing training">
+              <div class="program-badge" style="background:var(--red);">Workshops</div>
+            </div>
+            <div class="program-body">
+              <div class="program-age">Open to All Ages &amp; Levels</div>
+              <h3 class="program-name">Self-Defense &amp; Kickboxing</h3>
+              <p class="program-desc">Practical self-defense workshops and kickboxing sessions for fitness, confidence, and real-world awareness. Available as standalone workshops or recurring classes — contact us to schedule.</p>
+              <div class="program-skills">
+                <span class="skill-tag">Self-Defense</span>
+                <span class="skill-tag">Kickboxing</span>
+                <span class="skill-tag">Fitness</span>
+                <span class="skill-tag">Awareness</span>
+              </div>
+              <a href="mailto:inertiastl@gmail.com?subject=Workshop%20Inquiry" class="program-link" aria-label="Inquire about self-defense and kickboxing workshops">
+                Inquire for Details
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true"><path d="M1 5h10M7 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PHILOSOPHY / TENETS ──────────────────────────────────── -->
+    <section id="philosophy" aria-labelledby="philosophy-heading">
+
+      <!-- Seigaiha (青海波) wave pattern background -->
+      <div class="philosophy-wave-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <!-- Seigaiha tile: r=40, tile size 80×60 offset brickwork -->
+            <pattern id="seigaiha" x="0" y="0" width="80" height="60" patternUnits="userSpaceOnUse">
+              <!-- Row 1 -->
+              <circle cx="0"  cy="60" r="40" fill="none" stroke="#2C5F9E" stroke-width="1.2"/>
+              <circle cx="80" cy="60" r="40" fill="none" stroke="#2C5F9E" stroke-width="1.2"/>
+              <circle cx="40" cy="60" r="40" fill="none" stroke="#1B3A6B" stroke-width="0.8"/>
+              <!-- Row 2 offset -->
+              <circle cx="0"  cy="30" r="40" fill="none" stroke="#2C5F9E" stroke-width="1.2"/>
+              <circle cx="80" cy="30" r="40" fill="none" stroke="#2C5F9E" stroke-width="1.2"/>
+              <circle cx="40" cy="30" r="40" fill="none" stroke="#1B3A6B" stroke-width="0.8"/>
+              <!-- Soft fill of lower half arcs -->
+              <path d="M-40,60 a40,40 0 0,0 80,0 Z" fill="#1B3A6B" fill-opacity="0.15"/>
+              <path d="M0,60 a40,40 0 0,0 80,0 Z" fill="#1B3A6B" fill-opacity="0.12"/>
+              <path d="M40,60 a40,40 0 0,0 80,0 Z" fill="#1B3A6B" fill-opacity="0.15"/>
+              <path d="M-40,30 a40,40 0 0,0 80,0 Z" fill="#0D2040" fill-opacity="0.1"/>
+              <path d="M0,30 a40,40 0 0,0 80,0 Z" fill="#0D2040" fill-opacity="0.08"/>
+              <path d="M40,30 a40,40 0 0,0 80,0 Z" fill="#0D2040" fill-opacity="0.1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#seigaiha)"/>
+        </svg>
+      </div>
+
+      <div class="container" style="position:relative;z-index:1;">
+
+        <!-- 靑濤館 etymology header -->
+        <div class="philosophy-header fade-in">
+          <p class="section-label" id="philosophy-heading">The Way of the Blue Wave School</p>
+
+          <div class="cdkwan-script" role="group" aria-label="Chung Do Kwan character breakdown">
+            <!-- 靑 -->
+            <div class="cdkwan-char-group">
+              <span class="cdkwan-hanja" style="font-family:'Noto Serif SC',serif;" title="Blue / Pure / Clear">靑</span>
+              <span class="cdkwan-romanji">청 · Chung</span>
+              <span class="cdkwan-meaning">Blue · Pure</span>
+            </div>
+
+            <span class="cdkwan-plus" aria-hidden="true">+</span>
+
+            <!-- 濤 -->
+            <div class="cdkwan-char-group">
+              <span class="cdkwan-hanja" style="font-family:'Noto Serif SC',serif;" title="Waves / Billows">濤</span>
+              <span class="cdkwan-romanji">도 · Do</span>
+              <span class="cdkwan-meaning">Wave · Way</span>
+            </div>
+
+            <span class="cdkwan-plus" aria-hidden="true">+</span>
+
+            <!-- 館 -->
+            <div class="cdkwan-char-group">
+              <span class="cdkwan-hanja" style="font-family:'Noto Serif SC',serif;" title="School / Hall">館</span>
+              <span class="cdkwan-romanji">관 · Kwan</span>
+              <span class="cdkwan-meaning">School · Hall</span>
+            </div>
+
+            <span class="cdkwan-plus" aria-hidden="true">=</span>
+
+            <!-- Full name -->
+            <div class="cdkwan-char-group">
+              <span class="cdkwan-hanja" style="font-family:'Noto Serif SC',serif;letter-spacing:6px;" title="Chung Do Kwan">靑濤館</span>
+              <span class="cdkwan-romanji">청도관 · Chung Do Kwan</span>
+              <span class="cdkwan-meaning">Founded 1944</span>
+            </div>
+          </div>
+
+          <p class="cdkwan-translation">
+            <em>"The Way of the Blue Wave School"</em>
+          </p>
+        </div>
+
+        <!-- Two tenets -->
+        <div class="tenets-row fade-in stagger-2" role="list" aria-label="Core tenets of Chung Do Kwan">
+
+          <!-- 努力 Noryeok — Effort -->
+          <div class="tenet-card" role="listitem">
+            <span class="tenet-kanji" style="font-family:'Noto Serif SC',serif;" aria-label="Noryeok — Effort">努力</span>
+            <div class="tenet-romanji">Noryeok</div>
+            <div class="tenet-english">Effort</div>
+            <p class="tenet-meaning">The relentless, wholehearted pursuit of excellence — in the body, the mind, and the spirit. Progress demands full commitment.</p>
+          </div>
+
+          <div class="tenet-divider-line" aria-hidden="true"></div>
+
+          <!-- 忍耐 Innae — Perseverance -->
+          <div class="tenet-card" role="listitem">
+            <span class="tenet-kanji" style="font-family:'Noto Serif SC',serif;" aria-label="Innae — Perseverance">忍耐</span>
+            <div class="tenet-romanji">Innae</div>
+            <div class="tenet-english">Perseverance</div>
+            <p class="tenet-meaning">To endure hardship with patience and emerge stronger on the other side. The way is long — keep walking.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── CTA BLOCK 1 ────────────────────────────────────────── -->
+    <section class="cta-block red" aria-label="Free trial offer">
+      <div class="container">
+        <p class="section-label fade-in" style="color:rgba(245,245,245,0.6)">Limited Availability</p>
+        <h2 class="cta-block-title fade-in stagger-1">Your first week is on us.</h2>
+        <p class="cta-block-sub fade-in stagger-2">No commitment. No pressure. Just show up and train.</p>
+        <a href="#free-trial" class="btn-primary fade-in stagger-3">Claim My Free Week →</a>
+        <div class="cta-badges fade-in stagger-3">
+          <div class="cta-badge"><span class="cta-badge-icon">✓</span> No contracts</div>
+          <div class="cta-badge"><span class="cta-badge-icon">✓</span> All skill levels</div>
+          <div class="cta-badge"><span class="cta-badge-icon">✓</span> All ages welcome</div>
+          <div class="cta-badge"><span class="cta-badge-icon">✓</span> Cancel anytime</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCHEDULE ──────────────────────────────────────────────── -->
+    <section id="schedule" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label fade-in">Class Times</p>
+          <h2 class="section-title fade-in stagger-1" id="schedule-heading">Weekly Schedule</h2>
+          <p class="section-sub fade-in stagger-2">Classes run Monday through Thursday. Opens at 4:30 PM. Drop-ins welcome during your free trial week.</p>
+        </div>
+        <div class="schedule-grid" role="grid" aria-label="Weekly class schedule" style="grid-template-columns: repeat(4,1fr);">
+          <div class="schedule-day" role="rowgroup">
+            <div class="day-header" role="columnheader">Monday</div>
+            <div class="schedule-slot" data-class="kids adult" role="gridcell" tabindex="0">
+              <div class="slot-time">5:00 PM</div>
+              <div class="slot-class">All Classes</div>
+              <span class="slot-level level-all">All Levels</span>
+            </div>
+          </div>
+          <div class="schedule-day" role="rowgroup">
+            <div class="day-header" role="columnheader">Tuesday</div>
+            <div class="schedule-slot" data-class="kids adult" role="gridcell" tabindex="0">
+              <div class="slot-time">5:30 PM</div>
+              <div class="slot-class">All Classes</div>
+              <span class="slot-level level-all">All Levels</span>
+            </div>
+          </div>
+          <div class="schedule-day" role="rowgroup">
+            <div class="day-header" role="columnheader">Wednesday</div>
+            <div class="schedule-slot" data-class="kids adult" role="gridcell" tabindex="0">
+              <div class="slot-time">5:30 PM</div>
+              <div class="slot-class">All Classes</div>
+              <span class="slot-level level-all">All Levels</span>
+            </div>
+          </div>
+          <div class="schedule-day" role="rowgroup">
+            <div class="day-header" role="columnheader">Thursday</div>
+            <div class="schedule-slot" data-class="kids adult" role="gridcell" tabindex="0">
+              <div class="slot-time">5:30 PM</div>
+              <div class="slot-class">All Classes</div>
+              <span class="slot-level level-all">All Levels</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:var(--grey-500);margin-top:20px;text-align:center;">Classes run Monday – Thursday. Drop-ins welcome during your free trial week. Contact us to confirm current times.</p>
+
+        <!-- Google Calendar Subscribe -->
+        <div class="gcal-section fade-in" style="margin-top:40px;padding:28px 32px;background:var(--grey-200);border:1px solid var(--grey-300);border-radius:var(--radius);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" stroke="#C0392B" stroke-width="1.8"/>
+              <path d="M16 2v4M8 2v4M3 10h18" stroke="#C0392B" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span style="font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);">Add Classes to Google Calendar</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Inertia+Martial+Arts+Class&dates=20260413T170000/20260413T180000&recur=RRULE:FREQ%3DWEEKLY;BYDAY%3DMO&location=Inertia+Martial+Arts+%26+Fitness,+Chesterfield,+MO&details=Chung+Do+Kwan+Taekwondo+class+at+Inertia+Martial+Arts+%26+Fitness"
+               target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);background:var(--grey-300);border:1px solid var(--grey-700);border-radius:var(--radius);padding:9px 16px;transition:background 200ms,border-color 200ms;"
+               onmouseover="this.style.background='var(--red)';this.style.borderColor='var(--red)'"
+               onmouseout="this.style.background='var(--grey-300)';this.style.borderColor='var(--grey-700)'">
+              <span>📅</span> Mon · 5:00 PM
+            </a>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Inertia+Martial+Arts+Class&dates=20260414T173000/20260414T183000&recur=RRULE:FREQ%3DWEEKLY;BYDAY%3DTU&location=Inertia+Martial+Arts+%26+Fitness,+Chesterfield,+MO&details=Chung+Do+Kwan+Taekwondo+class+at+Inertia+Martial+Arts+%26+Fitness"
+               target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);background:var(--grey-300);border:1px solid var(--grey-700);border-radius:var(--radius);padding:9px 16px;transition:background 200ms,border-color 200ms;"
+               onmouseover="this.style.background='var(--red)';this.style.borderColor='var(--red)'"
+               onmouseout="this.style.background='var(--grey-300)';this.style.borderColor='var(--grey-700)'">
+              <span>📅</span> Tue · 5:30 PM
+            </a>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Inertia+Martial+Arts+Class&dates=20260415T173000/20260415T183000&recur=RRULE:FREQ%3DWEEKLY;BYDAY%3DWE&location=Inertia+Martial+Arts+%26+Fitness,+Chesterfield,+MO&details=Chung+Do+Kwan+Taekwondo+class+at+Inertia+Martial+Arts+%26+Fitness"
+               target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);background:var(--grey-300);border:1px solid var(--grey-700);border-radius:var(--radius);padding:9px 16px;transition:background 200ms,border-color 200ms;"
+               onmouseover="this.style.background='var(--red)';this.style.borderColor='var(--red)'"
+               onmouseout="this.style.background='var(--grey-300)';this.style.borderColor='var(--grey-700)'">
+              <span>📅</span> Wed · 5:30 PM
+            </a>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Inertia+Martial+Arts+Class&dates=20260416T173000/20260416T183000&recur=RRULE:FREQ%3DWEEKLY;BYDAY%3DTH&location=Inertia+Martial+Arts+%26+Fitness,+Chesterfield,+MO&details=Chung+Do+Kwan+Taekwondo+class+at+Inertia+Martial+Arts+%26+Fitness"
+               target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);background:var(--grey-300);border:1px solid var(--grey-700);border-radius:var(--radius);padding:9px 16px;transition:background 200ms,border-color 200ms;"
+               onmouseover="this.style.background='var(--red)';this.style.borderColor='var(--red)'"
+               onmouseout="this.style.background='var(--grey-300)';this.style.borderColor='var(--grey-700)'">
+              <span>📅</span> Thu · 5:30 PM
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <span style="font-family:'Inter',sans-serif;font-size:12px;color:var(--grey-500);">Or copy the schedule link:</span>
+            <button id="copy-cal-link"
+              onclick="navigator.clipboard.writeText('https://inertiastl.com/#schedule').then(function(){var b=document.getElementById('copy-cal-link');b.textContent='✓ Copied!';b.style.color='var(--red)';setTimeout(function(){b.textContent='Copy Link';b.style.color='var(--grey-500)';},2000);})"
+              style="font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--grey-500);border:1px solid var(--grey-700);border-radius:var(--radius);padding:6px 14px;background:transparent;cursor:pointer;transition:color 200ms,border-color 200ms;"
+              onmouseover="this.style.color='var(--white)';this.style.borderColor='var(--white)'"
+              onmouseout="this.style.color='var(--grey-500)';this.style.borderColor='var(--grey-700)'">
+              Copy Link
+            </button>
+          </div>
+
+          <!-- Subscribe to full calendars -->
+          <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--grey-300);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="#C0392B" stroke-width="1.8"/>
+                <path d="M12 7v5l3 3" stroke="#C0392B" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+              <span style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);">Subscribe to Full Calendars</span>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+              <a href="https://calendar.google.com/calendar/u/0/r?cid=inertiastl%40gmail.com"
+                 target="_blank" rel="noopener"
+                 style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:var(--white);background:var(--grey-300);border:1px solid var(--grey-700);border-radius:var(--radius);padding:10px 18px;transition:background 200ms,border-color 200ms;"
+                 onmouseover="this.style.background='rgba(192,57,43,0.15)';this.style.borderColor='var(--red)'"
+                 onmouseout="this.style.background='var(--grey-300)';this.style.borderColor='var(--grey-700)'">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                Inertia Events Calendar
+              </a>
+              <a href="https://calendar.google.com/calendar/u/0/r?cid=chungdokwan.org_events%40group.calendar.google.com"
+                 target="_blank" rel="noopener"
+                 style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:var(--white);background:var(--grey-300);border:1px solid var(--grey-700);border-radius:var(--radius);padding:10px 18px;transition:background 200ms,border-color 200ms;"
+                 onmouseover="this.style.background='rgba(192,57,43,0.15)';this.style.borderColor='var(--red)'"
+                 onmouseout="this.style.background='var(--grey-300)';this.style.borderColor='var(--grey-700)'">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                CDA Events Calendar
+              </a>
+            </div>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:var(--grey-500);margin-top:10px;line-height:1.5;">Subscribing adds all Inertia &amp; Chung Do Kwan Association events — tournaments, seminars, and special classes — directly to your Google Calendar.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── LINEAGE ────────────────────────────────────────────────── -->
+    <section id="lineage" aria-labelledby="lineage-heading">
+      <div class="container">
+        <div class="lineage-heading">
+          <p class="section-label">Heritage &amp; Tradition</p>
+          <h2 class="section-title" id="lineage-heading">Chung Do Kwan Lineage</h2>
+        </div>
+        <div class="lineage-chain fade-in" id="lineage-chain" role="list" aria-label="Chung Do Kwan lineage">
+
+          <!-- Won Kuk Lee -->
+          <div class="lineage-node-wrap" data-index="0" role="listitem">
+            <div class="lineage-photo-circle">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Lee_Won_Kuk.jpg/300px-Lee_Won_Kuk.jpg"
+                   alt="Won Kuk Lee, Grand Master"
+                   onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'lineage-monogram\'>WKL</span>'">
+            </div>
+            <div class="lineage-info">
+              <span class="lineage-badge">Grand Master</span>
+              <div class="lineage-name">Won Kuk Lee</div>
+              <div class="lineage-rank">10th Dan · Tang Soo Do</div>
+              <div class="lineage-detail" style="max-width:160px;"><span style="color:var(--red);">4th Dan Shotokan Karate</span><br>Founder, Chung Do Kwan · 1944</div>
+            </div>
+          </div>
+
+          <div class="lineage-connector" data-index="0" aria-hidden="true"></div>
+
+          <!-- Yong Taek Chung -->
+          <div class="lineage-node-wrap" data-index="1" role="listitem">
+            <div class="lineage-photo-circle">
+              <span class="lineage-monogram">YTC</span>
+            </div>
+            <div class="lineage-info">
+              <span class="lineage-badge">Grand Master</span>
+              <div class="lineage-name">Yong Taek Chung</div>
+              <div class="lineage-rank">9th Dan · Chung Do Kwan</div>
+              <div class="lineage-detail">Chung's Karate School<br>Kansas City, MO</div>
+            </div>
+          </div>
+
+          <div class="lineage-connector" data-index="1" aria-hidden="true"></div>
+
+          <!-- David Blevins -->
+          <div class="lineage-node-wrap" data-index="2" role="listitem">
+            <div class="lineage-photo-circle">
+              <span class="lineage-monogram">DB</span>
+            </div>
+            <div class="lineage-info">
+              <span class="lineage-badge">Master</span>
+              <div class="lineage-name">David Blevins</div>
+              <div class="lineage-rank">6th Dan · Chung Do Kwan</div>
+              <div class="lineage-detail">Blue Wave Martial Arts &amp; Fitness<br>Flint Hill, MO</div>
+            </div>
+          </div>
+
+          <div class="lineage-connector" data-index="2" aria-hidden="true"></div>
+
+          <!-- Inertia MA -->
+          <div class="lineage-node-wrap is-us" data-index="3" role="listitem">
+            <div class="lineage-photo-circle">
+              <img src="images/logo.png" alt="Inertia Martial Arts and Fitness"
+                   style="object-fit:contain;padding:8px;"
+                   onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'lineage-monogram\' style=\'color:var(--red)\'>IMA</span>'">
+            </div>
+            <div class="lineage-info">
+              <span class="lineage-badge" style="color:var(--white);border-color:rgba(245,245,245,0.4);">Est. 2023</span>
+              <div class="lineage-name">Inertia MA</div>
+              <div class="lineage-rank">Chesterfield, Missouri</div>
+              <div class="lineage-detail">Inertia Martial Arts &amp; Fitness</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── GALLERY ───────────────────────────────────────────────── -->
+    <section id="gallery" aria-label="Training gallery">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label fade-in">Inside the Dojang</p>
+          <h2 class="section-title fade-in stagger-1">An Inside Look at Our Art</h2>
+        </div>
+        <div class="gallery-grid fade-in">
+          <div class="gallery-item" role="img" aria-label="Students training in the dojo"></div>
+          <div class="gallery-item" role="img" aria-label="Taekwondo sparring session"></div>
+          <div class="gallery-item" role="img" aria-label="Kids class in session"></div>
+          <div class="gallery-item" role="img" aria-label="Adult training drills"></div>
+          <div class="gallery-item" role="img" aria-label="Competition preparation"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:48px;">
+          <h2 class="section-title fade-in stagger-1" id="about-heading">Meet Your Instructors</h2>
+        </div>
+        <div class="about-inner">
+          <div class="about-photo fade-in">
+            <div class="about-photo-img" role="img" aria-label="Instructor demonstrating Taekwondo form"></div>
+          </div>
+          <div class="about-content fade-in stagger-2">
+            <p class="section-label">Instructors</p>
+            <h2 class="about-name">Joseph &amp; Paige Hoeber</h2>
+            <p class="about-title">Head Instructors · Inertia Martial Arts &amp; Fitness</p>
+            <div class="about-bio">
+              <p>Joseph Hoeber brings over 20 years of Chung Do Kwan training. Currently pursuing his 4th Dan under Master John Mee (4th Dan) of Blue Wave Forever, he leads classes with disciplined technique rooted in the authentic lineage of Korean martial arts established in the 1940s.</p>
+              <p>Paige Hoeber holds a 1st Dan black belt in Chung Do Kwan Taekwondo with 7 years of dedicated training. Her approachable teaching style makes martial arts accessible and welcoming for students of all ages and experience levels.</p>
+              <p>Together they run a family-oriented school where every student — from absolute beginners to advancing black belts — is supported every step of the way. No contracts. Just expert instruction.</p>
+            </div>
+            <div class="credentials">
+              <div class="credential">
+                <div class="cred-label">Joseph Hoeber</div>
+                <div class="cred-value">3rd Dan · 20+ Years<br><span style="font-size:12px;color:var(--grey-500);">Pursuing 4th Dan under Master John Mee · Blue Wave Forever</span></div>
+              </div>
+              <div class="credential">
+                <div class="cred-label">Paige Hoeber</div>
+                <div class="cred-value">1st Dan · 7 Years</div>
+              </div>
+              <div class="credential">
+                <div class="cred-label">Style</div>
+                <div class="cred-value">Chung Do Kwan</div>
+              </div>
+              <div class="credential">
+                <div class="cred-label">Location</div>
+                <div class="cred-value">Chesterfield, MO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TESTIMONIALS ──────────────────────────────────────────── -->
+    <section id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label fade-in">Student Reviews</p>
+          <h2 class="section-title fade-in stagger-1" id="testimonials-heading">What Our Students Say</h2>
+        </div>
+      </div>
+      <!-- Google Business Rating Badge -->
+      <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:40px;" class="fade-in">
+        <div style="display:flex;align-items:center;gap:8px;background:var(--grey-200);border:1px solid var(--grey-300);border-radius:var(--radius);padding:12px 20px;">
+          <span style="font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:var(--white);">5.0</span>
+          <div>
+            <div style="color:var(--red);font-size:16px;letter-spacing:2px;">★★★★★</div>
+            <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--grey-500);letter-spacing:0.06em;">5 Google Reviews</div>
+          </div>
+          <svg style="margin-left:8px;" width="20" height="20" viewBox="0 0 24 24" aria-label="Google"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+      </div>
+      <div class="testimonials-wrapper" style="overflow:hidden;" aria-label="Student testimonials from Google">
+        <div class="testimonials-track" role="list">
+          <!-- Real Google Reviews — Set 1 -->
+          <div class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-quote">"My son and daughter have been enrolled in Inertia Martial Arts since May and absolutely love the class. They look forward to it every week and have been learning so much the past few months. Joe and Paige are wonderful instructors and really have a special talent for teaching. I highly recommend Inertia Martial Arts!"</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar" aria-hidden="true">AE</div>
+              <div>
+                <div class="testimonial-name">Anna Engelhard</div>
+                <div class="testimonial-belt">Google Review · 5 Stars</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-quote">"Inertia Martial Arts is a fantastic program. My son is so excited to go every week and I am amazed at what he has learned. The technique is wonderful and he is learning skills such as focus, attention and listening that will benefit him in all aspects of his life. Highly recommend this program for kids &amp; adults!"</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar" aria-hidden="true">CD</div>
+              <div>
+                <div class="testimonial-name">Celia Donio</div>
+                <div class="testimonial-belt">Google Review · 5 Stars</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" role="listitem">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-quote">"The instructors at Inertia Martial Arts and Fitness are dedicated, hard working, and passionate black belts. Their inclusive approach to martial arts instruction is effective and produces results. If you are looking for something to challenge you physically and mentally then Inertia Martial Arts and Fitness is for you!"</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar" aria-hidden="true">KM</div>
+              <div>
+                <div class="testimonial-name">Kaitlyn McBride</div>
+                <div class="testimonial-belt">Google Review · 5 Stars</div>
+              </div>
+            </div>
+          </div>
+          <!-- Duplicate set for infinite scroll -->
+          <div class="testimonial-card" role="listitem" aria-hidden="true">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"My son and daughter have been enrolled in Inertia Martial Arts since May and absolutely love the class. They look forward to it every week and have been learning so much the past few months. Joe and Paige are wonderful instructors and really have a special talent for teaching. I highly recommend Inertia Martial Arts!"</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">AE</div>
+              <div><div class="testimonial-name">Anna Engelhard</div><div class="testimonial-belt">Google Review · 5 Stars</div></div>
+            </div>
+          </div>
+          <div class="testimonial-card" role="listitem" aria-hidden="true">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"Inertia Martial Arts is a fantastic program. My son is so excited to go every week and I am amazed at what he has learned. The technique is wonderful and he is learning skills such as focus, attention and listening that will benefit him in all aspects of his life. Highly recommend this program for kids &amp; adults!"</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">CD</div>
+              <div><div class="testimonial-name">Celia Donio</div><div class="testimonial-belt">Google Review · 5 Stars</div></div>
+            </div>
+          </div>
+          <div class="testimonial-card" role="listitem" aria-hidden="true">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">"The instructors at Inertia Martial Arts and Fitness are dedicated, hard working, and passionate black belts. Their inclusive approach to martial arts instruction is effective and produces results. If you are looking for something to challenge you physically and mentally then Inertia Martial Arts and Fitness is for you!"</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">KM</div>
+              <div><div class="testimonial-name">Kaitlyn McBride</div><div class="testimonial-belt">Google Review · 5 Stars</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;" class="fade-in">
+        <a href="https://www.google.com/maps/place/Inertia+Martial+Arts+and+Fitness/@38.6703987,-90.4999129,17z" target="_blank" rel="noopener noreferrer" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--grey-500);display:inline-flex;align-items:center;gap:6px;">
+          View all reviews on Google Maps
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ─── FREE TRIAL FORM ────────────────────────────────────────── -->
+    <section id="free-trial" aria-labelledby="trial-heading">
+      <div class="container">
+        <div class="trial-inner">
+          <div class="trial-left fade-in">
+            <p class="section-label">Start Today</p>
+            <h2 class="trial-pitch" id="trial-heading">
+              Your First Week.<br>
+              <span class="red">Completely Free.</span>
+            </h2>
+            <p class="trial-desc">
+              No credit card. No commitment. No contracts — ever.
+              Just show up, train hard, and decide for yourself.
+              We're confident you'll love it.
+            </p>
+            <div class="trust-checks">
+              <div class="trust-check">
+                <div class="check-icon" aria-hidden="true">✓</div>
+                <div>Full week of unlimited classes — kids and adult programs</div>
+              </div>
+              <div class="trust-check">
+                <div class="check-icon" aria-hidden="true">✓</div>
+                <div>Expert instruction from the first session, regardless of experience</div>
+              </div>
+              <div class="trust-check">
+                <div class="check-icon" aria-hidden="true">✓</div>
+                <div>No contracts. Month-to-month only. Cancel any time.</div>
+              </div>
+              <div class="trust-check">
+                <div class="check-icon" aria-hidden="true">✓</div>
+                <div>All ages welcome — 5 years old through adult</div>
+              </div>
+            </div>
+            <div class="pricing-note">
+              <div class="pricing-note-top">Month-to-month membership</div>
+              <div class="pricing-note-sub">Unlimited classes · No initiation fees · No hidden costs · Cancel anytime</div>
+            </div>
+          </div>
+
+          <div class="trial-form-wrap fade-in stagger-2">
+            <div id="form-view">
+              <h3 class="form-title">Claim Your Free Trial Week</h3>
+              <form id="trial-form" novalidate aria-label="Free trial sign-up form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Jane" required autocomplete="given-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Smith" required autocomplete="family-name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="(314) 555-0100" autocomplete="tel">
+                </div>
+                <div class="form-group">
+                  <label for="age-group">I'm interested in *</label>
+                  <select id="age-group" name="age_group" class="form-control" required>
+                    <option value="" disabled selected>Select a program</option>
+                    <option value="kids">Kids Taekwondo (Ages 5–12)</option>
+                    <option value="teen-adult">Teen &amp; Adult (Ages 13+)</option>
+                    <option value="both">Kids + Adult (Family)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="hear">How did you hear about us?</label>
+                  <select id="hear" name="hear_about" class="form-control">
+                    <option value="" disabled selected>Select one</option>
+                    <option value="google">Google Search</option>
+                    <option value="referral">Friend / Family Referral</option>
+                    <option value="social">Social Media</option>
+                    <option value="driving">Drove By</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Questions or notes (optional)</label>
+                  <textarea id="message" name="message" class="form-control" rows="3" placeholder="E.g., my child is 8 years old with no prior martial arts experience..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary form-submit">
+                  Claim My Free Trial Week →
+                </button>
+                <p class="form-disclaimer">By submitting, you agree to be contacted by Inertia Martial Arts regarding your trial. We never spam.</p>
+              </form>
+            </div>
+            <div class="form-success" id="form-success" role="status" aria-live="polite">
+              <div class="success-icon" aria-hidden="true">🥋</div>
+              <h3 class="success-title">You're all set!</h3>
+              <p class="success-sub">We'll reach out within 24 hours to schedule your first class. Get ready to train.</p>
+              <a href="#schedule" class="btn-primary" style="margin-top:24px;display:inline-flex;">View the Schedule →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TOURNAMENTS ─────────────────────────────────────────── -->
+    <section id="tournaments" aria-labelledby="tournaments-heading" style="padding:100px 0;background:var(--grey-100);">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label fade-in">Competition</p>
+          <h2 class="section-title fade-in stagger-1" id="tournaments-heading">Tournaments &amp; Events</h2>
+          <p class="section-sub fade-in stagger-2">Test your skills, build confidence, and represent Inertia MA on the mat. Below are upcoming tournaments sanctioned by the Chung Do Kwan Association.</p>
+        </div>
+
+        <!-- Tournament Card -->
+        <div class="fade-in" style="display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;background:var(--black);border:1px solid var(--grey-300);border-radius:var(--radius);padding:48px 48px;">
+
+          <!-- Logo -->
+          <div style="flex-shrink:0;text-align:center;">
+            <img src="images/gateway-logo.png" alt="St. Louis Gateway Championships logo"
+                 style="width:180px;height:180px;object-fit:contain;"
+                 onerror="this.style.display='none'">
+          </div>
+
+          <!-- Info -->
+          <div style="display:flex;flex-direction:column;">
+            <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">Featured Tournament</div>
+            <div style="font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:6px;">St. Louis Gateway Championships</div>
+            <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--grey-500);margin-bottom:20px;">Hosted by Blue Wave Martial Arts &amp; Fitness · Master David Blevins</div>
+            <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.75;color:var(--grey-500);margin-bottom:24px;">A premier Chung Do Kwan Taekwondo tournament open to competitors of all ages and ranks. Inertia MA students are encouraged to register and represent on the mat.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;">
+              <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;background:var(--grey-200);border:1px solid var(--grey-300);border-radius:2px;padding:4px 10px;color:var(--grey-500);">All Ages</span>
+              <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;background:var(--grey-200);border:1px solid var(--grey-300);border-radius:2px;padding:4px 10px;color:var(--grey-500);">All Ranks</span>
+              <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;background:var(--grey-200);border:1px solid var(--grey-300);border-radius:2px;padding:4px 10px;color:var(--grey-500);">Forms &amp; Sparring</span>
+            </div>
+            <a href="https://bluewavestl.com/st-louis-gateway-championships/" target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--white);background:var(--red);border-radius:var(--radius);padding:13px 24px;transition:background 200ms,transform 200ms;align-self:flex-start;"
+               onmouseover="this.style.background='#96281B';this.style.transform='translateY(-1px)'"
+               onmouseout="this.style.background='var(--red)';this.style.transform='translateY(0)'">
+              View Tournament Details →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA BLOCK 2 ────────────────────────────────────────── -->
+    <section class="cta-block blue" aria-label="Contact call to action">
+      <div class="container">
+        <p class="section-label fade-in" style="color:rgba(245,245,245,0.5)">Questions?</p>
+        <h2 class="cta-block-title fade-in stagger-1">Ready to get started?<br>We're here to help.</h2>
+        <p class="cta-block-sub fade-in stagger-2">Call us, email us, or just stop by the dojang. We love meeting prospective students.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" class="fade-in stagger-3">
+          <a href="#free-trial" class="btn-primary">Sign Up Free →</a>
+          <a href="mailto:inertiastl@gmail.com" class="btn-secondary">Email Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── LOCATION ──────────────────────────────────────────────── -->
+    <section id="location" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label fade-in">Find Us</p>
+          <h2 class="section-title fade-in stagger-1" id="location-heading">Visit the Dojang</h2>
+        </div>
+        <div class="location-inner">
+          <div class="location-map fade-in" aria-label="Map showing Inertia Martial Arts location in Chesterfield, MO">
+            <iframe
+              src="https://maps.google.com/maps?q=620+N+Woods+Mill+Rd,+Chesterfield,+MO+63017&output=embed"
+              title="Inertia Martial Arts and Fitness location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Google Maps showing Inertia Martial Arts location">
+            </iframe>
+          </div>
+          <div class="location-details fade-in stagger-2">
+            <div class="location-info">
+              <div class="info-row">
+                <div class="info-icon" aria-hidden="true">📍</div>
+                <div>
+                  <div class="info-label">Address</div>
+                  <div class="info-value">620 N Woods Mill Rd<br>Chesterfield, MO 63017<br><small style="color:var(--grey-500);">Ivy Chapel UCC · off Hwy 141 &amp; Olive</small><br><a href="https://www.google.com/maps/place/620+N+Woods+Mill+Rd,+Chesterfield,+MO+63017" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-size:12px;">Get Directions →</a></div>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon" aria-hidden="true">📞</div>
+                <div>
+                  <div class="info-label">Phone</div>
+                  <div class="info-value">
+                    <a href="tel:6362530655" style="color:var(--white);">Paige: (636) 253-0655</a><br>
+                    <a href="tel:6363574093" style="color:var(--white);">Joe: (636) 357-4093</a>
+                  </div>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon" aria-hidden="true">✉</div>
+                <div>
+                  <div class="info-label">Email</div>
+                  <div class="info-value"><a href="mailto:inertiastl@gmail.com" style="color:var(--white);">inertiastl@gmail.com</a></div>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="info-icon" aria-hidden="true">🕐</div>
+                <div>
+                  <div class="info-label">Class Schedule</div>
+                  <div class="info-value">Mon: 5:00 PM<br>Tue – Thu: 5:30 PM<br><small style="color:var(--grey-500);">Opens 4:30 PM · Closed Fri–Sun</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="social-links" role="list" aria-label="Social media links">
+              <a href="https://www.facebook.com/inertiastl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Inertia Martial Arts on Facebook" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/inertiastl" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Inertia Martial Arts on Instagram" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@InertiaSTL" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Inertia Martial Arts on YouTube" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img class="nav-logo-img" src="images/logo.png" alt="Inertia Martial Arts and Fitness logo" style="width:36px;height:36px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="logo-mark" aria-hidden="true" style="width:36px;height:36px;font-size:14px;display:none;">⬡</div>
+            <span style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.04em;line-height:1.2;">INERTIA MARTIAL<br>ARTS &amp; FITNESS</span>
+          </div>
+          <p class="footer-desc">Authentic Chung Do Kwan Taekwondo in Chesterfield, Missouri. Discipline, tradition, and athletic excellence for all ages.</p>
+          <a href="#free-trial" class="btn-primary" style="font-size:13px;padding:10px 22px;">Start Free Trial →</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Programs</div>
+          <a href="#programs">Kids Taekwondo</a>
+          <a href="#programs">Teen &amp; Adult</a>
+          <a href="#free-trial">Free Trial Week</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navigate</div>
+          <a href="#hero">Home</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#about">About</a>
+          <a href="#location">Location</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <a href="mailto:inertiastl@gmail.com">inertiastl@gmail.com</a>
+          <a href="https://www.google.com/maps/place/Inertia+Martial+Arts+and+Fitness" target="_blank" rel="noopener noreferrer">Chesterfield, MO</a>
+          <a href="https://www.facebook.com/inertiastl" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/inertiastl" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Inertia Martial Arts &amp; Fitness LLC · 620 N Woods Mill Rd, Chesterfield, MO 63017 · <a href="mailto:inertiastl@gmail.com" style="color:inherit;">inertiastl@gmail.com</a> · <a href="/privacy.html" style="color:inherit;">Privacy Policy</a></p>
+        <p class="footer-tagline">Taekwondo Chesterfield MO · Martial Arts Chesterfield · Chung Do Kwan</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MartialArtsSchool",
     "name": "Inertia Martial Arts & Fitness",
-    "description": "Chung Do Kwan Taekwondo classes for kids, teens, and adults in Chesterfield, Missouri.",
-    "telephone": "+1-636-357-4093",
+    "description": "Authentic Chung Do Kwan Taekwondo for all ages in Chesterfield, MO. Free trial week. No contracts.",
+    "url": "https://inertiastl.com/",
     "email": "inertiastl@gmail.com",
+    "telephone": "+16362530655",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "620 N Woods Mill Rd",
@@ -47,16 +2027,15 @@
       "postalCode": "63017",
       "addressCountry": "US"
     },
-    "sameAs": [
-      "https://www.facebook.com/inertiastl",
-      "https://www.instagram.com/inertiastl/",
-      "https://www.youtube.com/channel/UCAe8EBjt8Eemgnx9bXXp1vg"
-    ],
-    "url": "https://inertiastl.com/",
+    "openingHours": ["Mo 17:00-19:00", "Tu 17:30-19:30", "We 17:30-19:30", "Th 17:30-19:30"],
+    "geo": {"@type": "GeoCoordinates", "latitude": 38.671, "longitude": -90.499},
     "priceRange": "$",
     "image": "https://inertiastl.com/images/gallery2.jpg",
-    "geo": {"@type": "GeoCoordinates", "latitude": 38.671, "longitude": -90.499},
-    "hasMap": "https://www.google.com/maps/place/Inertia+Martial+Arts+and+Fitness"
+    "hasMap": "https://www.google.com/maps/place/Inertia+Martial+Arts+and+Fitness",
+    "sameAs": [
+      "https://www.facebook.com/inertiastl",
+      "https://www.instagram.com/inertiastl"
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -64,541 +2043,236 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What martial art do you teach at Inertia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We teach Chung Do Kwan Taekwondo, a traditional Korean martial art emphasizing discipline, fitness, self-defense, and respect for all ages."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does a Taekwondo membership cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our standard Taekwondo membership has no contracts or hidden fees. Family discounts are available. Call for pricing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer a free trial class?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! We offer a free trial week so you can experience our classes before committing to a membership."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What ages can join Inertia Martial Arts?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer Taekwondo classes for kids, teens, and adults. Contact us to find the right class for your schedule."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are there long-term contracts required?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No contracts. Ever. Period. You can cancel your membership at any time with no penalties or cancellation fees."
-        }
-      }
+      {"@type": "Question", "name": "What martial art do you teach?", "acceptedAnswer": {"@type": "Answer", "text": "We teach Chung Do Kwan Taekwondo, one of the original nine kwans of Korean martial arts, with a strong emphasis on traditional technique, discipline, and practical skill."}},
+      {"@type": "Question", "name": "How much does membership cost?", "acceptedAnswer": {"@type": "Answer", "text": "We offer month-to-month membership with no contracts and no initiation fees. Contact us for current rates. Your first week is completely free."}},
+      {"@type": "Question", "name": "Do you offer a free trial?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — your first full week of classes is free with no obligation or credit card required."}},
+      {"@type": "Question", "name": "What ages can join?", "acceptedAnswer": {"@type": "Answer", "text": "We offer classes for children ages 5 and up, teens, and adults of all fitness levels."}},
+      {"@type": "Question", "name": "Are there long-term contracts?", "acceptedAnswer": {"@type": "Answer", "text": "No contracts. Ever. We operate month-to-month because we believe our quality speaks for itself."}}
     ]
   }
   </script>
-</head>
 
-<body>
- <a class="skip-link" href="#main-content">Skip to main content</a>
- 
- <!-- Start Header  -->
- <header>
- 	 <div class="container">
- 	 	<div class="logo">
- 	 		 <a href="#home">Inertia <span>Martial Arts & Fitness</span></a>
- 	 	</div>
- 	 	<button class="ham-burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
- 	       <span></span>	
- 	       <span></span>
- 	 	</button>
- 	 	<nav class="nav" id="site-nav" aria-label="Primary">
- 	 		<ul>
- 	 			<li><a href="#home">Home</a></li>
- 	 			<li><a href="#about">About</a></li>
- 	 			<li><a href="#service">Services</a></li>
- 	 			<li><a href="#classes">Classes</a></li>
- 	 			<li><a href="#schedule">Schedule</a></li>
- 	 			<li><a href="#price">Price</a></li>
- 	 			<li><a href="#contact">Contact</a></li>
- 	 		</ul>
- 	 	</nav>
- 	 </div>
- </header>
- <!-- End Header  -->
+  <!-- ─── JAVASCRIPT ──────────────────────────────────────────────── -->
+  <script>
+  (function() {
+    'use strict';
 
- <main id="main-content">
-  <!-- Start Home -->
-  <section class="home wow flash" id="home">
-  	 <div class="container">
-  	 	  <p class="eyebrow wow slideInLeft" data-wow-delay="0.5s">Chung Do Kwan Taekwondo · Chesterfield, Missouri</p>
-  	 	  <h1 class="wow slideInLeft" data-wow-delay="0.8s">Inertia Martial Arts & Fitness</h1>
-  	 	  <p class="hero-subtitle wow slideInRight" data-wow-delay="1s">Train with certified instructors, build confidence, and join a family-friendly community that keeps the momentum going.</p>
-        <div class="hero-actions wow fadeInUp" data-wow-delay="1.2s">
-          <a class="btn primary" href="#free-trial">Start a Free Trial</a>
-          <a class="btn outline" href="#schedule">View Schedule</a>
-        </div>
-        <div class="hero-badges wow fadeInUp" data-wow-delay="1.4s">
-          <span class="badge">All Ages Welcome</span>
-          <span class="badge">Family Discounts</span>
-          <span class="badge">No Contracts</span>
-        </div>
-  	 </div>
-  	  <!-- go down -->
-  	      <a href="#about" class="go-down">
-  	      	  <i class="fa fa-angle-down" aria-hidden="true"></i>
-  	      </a>
-  	  <!-- go down -->
+    // ── Navbar scroll behavior ──────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    const backTop = document.getElementById('back-top');
+    let lastScroll = 0;
 
-  </section>
-  <!-- End Home -->
-
-
- <!-- Start About -->
-  <section class="about" id="about">
-  	  <div class="container">
- 	  <div class="content">
-  	  	   <div class="box wow bounceInUp">
-  	  	   	   <div class="inner">
-  	  	   	   	   <div class="img">
-  	  	   	   	   	  <img src="images/about1.jpg" alt="Instructor guiding a beginner Taekwondo class" loading="lazy" />
-  	  	   	   	   </div>
-                       <div class="text">
-                       	   <h4>Free Trial Week</h4>
-                       	   <p>It's nervewracking starting a new journey into fitness and martial arts, that's why Inertia offers a free week of trial classes to test the waters and ensure Chung Do Kwan Taekwondo is the right fit for you! Inertia's instructors, Miss Paige and Mister Joe will guide you or your child through the first basics learned as a no belt and your very first form!</p>
-                           <p>Don't miss this opportunity to experience the art of Taekwondo firsthand.</p>
-		       </div>
-  	  	  	   	   </div>
-  	  	  	   </div>
-  	  	  	   	<div class="box wow bounceInUp" data-wow-delay="0.2s">
-  	  	  	   	   <div class="inner">
-  	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about2.jpg" alt="Certified Taekwondo instructors at Inertia" loading="lazy" />
-  	  	  	   	   	   </div>
-                       <div class="text">
-                       	   <h4>Expert Instructors</h4>
-                       	   <p>Our highly skilled and certified instructors are passionate about teaching Taekwondo. They'll guide you through every step of your journey, ensuring you reach your full potential, both as a martial artist and as an individual.</p>
-                       </div>
-  	  	  	   	   </div>
-  	  	  	   </div>
-  	  	  	   <div class="box wow bounceInUp" data-wow-delay="0.4s">
-  	  	  	   	   <div class="inner">
-  	  	  	   	   	   <div class="img">
-  	  	  	   	   	   	  <img src="images/about3.jpg" alt="Student training for strength and confidence" loading="lazy" />
-  	  	  	   	   	   </div>
-                       <div class="text">
-                       	   <h4>Build Perfect Body</h4>
-                       	   <p>Taekwondo is not just about physical prowess; it's about building mental resilience too. Through dedicated training, you'll gain unshakable confidence, discipline, and focus, empowering you to conquer any challenges that come your way.</p>
-                       </div>
-  	  	  	   	   </div>
-  	  	  	   </div>
-  	  	  </div>
-  	  </div>
-  </section>
- <!-- End About -->
-
-
- <!-- Start Service -->
- <section class="service" id="service">
- 	<div class="container">
- 		 <div class="content">
- 		 	  <div class="text box wow slideInLeft">
-                  <h2>Services</h2>
-                  <p>With a legacy spanning generations, Chung Do Kwan is rooted in the rich tradition of Taekwondo. We blend this timeless wisdom with modern teaching techniques, ensuring a comprehensive and engaging learning experience.</p>
-                  <p>Whether you're ready to jump right into our welcoming community with our group classes or need a few private one on one sessions to build your confidence in your new Taekwondo adventure, Instructor Paige and Instructor Joe have a training solution for everyone.</p>
-    		 	  </div>
- 		 	  <div class="accordian box wow slideInRight">
- 		 	  	    <div class="accordian-container active">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>Fostering Leadership</h4>
- 		 	  	    		<span class="fa fa-angle-down"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>By equipping students with life-long self defense techniques, we build confidence and leadership skills that permeate to all aspects of life. </p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  	    <div class="accordian-container">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>Discipline and Perseverance</h4>
- 		 	  	    		<span class="fa fa-angle-up"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>Instill values of discipline and perseverance through the traditional style of Chung Do Kwan Taekwondo. These values carry outside of the Dojang to home, school, work, and personal life.</p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  	    <div class="accordian-container">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>All Ages Welcome</h4>
- 		 	  	    		<span class="fa fa-angle-up"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>Our family friendly environment ensures that whether you are 5 or 55, our instructors create a positive learning environment suitable for all ages.</p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  	    <div class="accordian-container">
- 		 	  	    	<div class="head">
- 		 	  	    		<h4>Other Services</h4>
- 		 	  	    		<span class="fa fa-angle-up"></span>
- 		 	  	    	</div>
- 		 	  	    	<div class="body">
- 		 	  	    		<p>We also offer Self Defense Workshops, Kickboxing Seminars, and patch programs for Girl Scout Troops.</p>
- 		 	  	    	</div>
- 		 	  	    </div>
- 		 	  </div>
- 		 </div>
- 	</div>
- </section>
- <!-- End Service -->
-
-<!-- Start Classes -->
-<section class="classes" id="classes">
-	<div class="container">
-		 <div class="content">
-		 	  <div class="box img wow slideInLeft">
-		 	  	 <img src="images/class2.jpg" alt="Taekwondo class in session" loading="lazy" />
-		 	  </div>
-		 	  <div class="box text wow slideInRight">
-		 	  	 <h2>Our Classes</h2>
-		 	  	 <p>Whether you're a seasoned martial artist or a complete beginner, Chung Do Kwan welcomes students of all ages and skill levels. Our classes are tailored to suit your unique needs, so you can progress at your own pace.</p>
-		 	  	<div class="class-items">
-		 	  	 <div class="item wow bounceInUp">
-                     <div class="item-img">
-                     	 <img src="images/class1.jpg" alt="Traditional Chung Do Kwan Taekwondo class" loading="lazy" />
-                     	 <div class="price">
-                     	 	 
-                     	 </div>
-                     </div>
-                     <div class="item-text">
-                     	  <h4>Traditional Chung Do Kwan Taekwondo</h4>
-                     	  <p>At Inertia, we foster a welcoming and inclusive community, where all students can thrive and discover their true potential. See our class schedule for our All Ages/All Ranks class times</p>
-                     </div>
-				 </div>
-		 	  	 </div>
-		 	  	</div>
-		 	  </div>
-		 </div>
-	</div>
-</section>
-<!-- End Classes -->
-
-<!-- Start Today -->
- <section class="start-today">
- 	<div class="container">
- 		 <div class="content">
- 		 	  <div class="box text wow slideInLeft">
- 		 	  	 <h2>Start Your Training Today</h2>
- 		 	  	 <p>Taekwondo is an excellent full-body workout that improves cardiovascular health, flexibility, and strength. You'll be amazed at the positive impact it has on your overall well-being.</p>
- 		 	  	 <a href="#free-trial" class="btn primary">Start Now</a>
- 		 	  </div>
- 		 	  <div class="box img wow slideInRight">
- 		 	  	 <img src="images/gallery4.jpg" alt="Students training together in the dojang" loading="lazy" />
- 		 	  </div>
-
- 		 </div>
- 	</div>
- </section>
-<!-- End Start Today -->
-
-<!-- Start Schedule -->
-  <section class="schedule" id="schedule">
-    <div class="container">
- 		 	  	 <h2>Class Schedule</h2>
- 		 	  	 <p>Our class schedule is designed to accommodate diverse interests and commitments. Whether you are a beginner looking to explore the world of martial arts or an experienced practitioner seeking to refine your skills, we have something for everyone.</p>
- 
-      <!-- Tabbed Google Calendar -->
-      <div class="box calendar wow fadeInUp" data-wow-delay="0.2s">
-        <div class="calendar-tabs">
-          <button class="active" data-mode="MONTH" type="button">Month</button>
-          <button data-mode="WEEK" type="button">Week</button>
-          <button data-mode="AGENDA" type="button">Agenda</button>
-        </div>
-        <div class="calendar-wrapper">
-          <iframe id="calendar-iframe" title="Inertia class schedule calendar"
-    src="https://calendar.google.com/calendar/embed?
-src=inertiastl%40gmail.com
-&color=%230B57D0
-&src=69cb05373f97bbb7c4922fe4a737298b0844d4f310472fca823bdceba1f13ee3%40group.calendar.google.com
-&color=%23f6bf26
-&ctz=America%2FChicago
-&mode=MONTH"
-            frameborder="0"
-            scrolling="no">
-          </iframe>
-        </div>
-      </div>
-    </div>
-</section>
-<!-- End Schedule -->
-
-<!-- Start Gallery -->
-  <section class="gallery" id="gallery">
-    <div class="container">
-  	   <h2>Gallery</h2>
-  	  <div class="content">
-  		 <div class="box wow slideInLeft">
-  		 	 <img src="images/gallery1.jpeg" alt="Taekwondo students practicing kicks" loading="lazy" />
-  		 </div>
-  		 <div class="box wow slideInRight">
-  		 	 <img src="images/gallery2.jpg" alt="Inertia martial arts class photo" loading="lazy" />
-  		 </div>
-  		 <div class="box wow slideInLeft">
-  		 	 <img src="images/gallery3.jpg" alt="Students training in the dojang" loading="lazy" />
-  		 </div>
-  		 <div class="box wow slideInRight">
-  		 	 <img src="images/gallery4.jpeg" alt="Youth Taekwondo class at Inertia" loading="lazy" />
-  		 </div>
-		<div class="box wow slideInLeft">
-  		 	 <img src="images/gallery5.jpg" alt="Taekwondo group training session" loading="lazy" />
-  		 </div>
-		<div class="box wow slideInRight">
-  		 	 <img src="images/gallery6.jpg" alt="Martial arts students practicing forms" loading="lazy" />
-  		 </div>
-  	  </div>
-    </div>
-  </section>
-<!-- End Gallery -->
-
- <!-- Start Price -->
-  <section class="price-package" id="price">
-  	 <div class="container">
-  	 	  <h2>Family Discounting Available</h2>
-  	 	  <p class="title-p">No Contracts. Ever. Period. Family discounting is available to enable whole families to train together.</p>
-  	 	  <div class="content">
-  	 	  	  <div class="box wow bounceInUp">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  
-  	 	  	  	  	   </div>
-  	 	  	  	   <div class="img">
-  	 	  	  	   	 <img src="images/price1.jpg" alt="Taekwondo class pricing package" loading="lazy" />
-  	 	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>Start Your Journey</h3>
-  	 	  	  	  	   	  <p>Building Confidence</p>
-  	 	  	  	  	   	  <p>Instilling Respect</p>
-  	 	  	  	  	   	  <p>Welcoming Environment</p>
-  	 	  	  	  	   	  <p>Cardio for the brain and body</p>
-  	 	  	  	  	   	  <p>Fostering Community</p>
-  	 	  	  	  	   	  <a href="#free-trial" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div>
-  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.2s">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  Call for Family Pricing
-  	 	  	  	  	   </div>
-  	 	  	  	   <div class="img">
-  	 	  	  	   	 <img src="images/price2.jpg" alt="Family Taekwondo training package" loading="lazy" />
-  	 	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>Grow as a Family</h3>
-  	 	  	  	  	   	  <p>Motivation and Accountability</p>
-  	 	  	  	  	   	  <p>Build Lasting Memories</p>
-  	 	  	  	  	   	  <p>Healthy Habits</p>
-  	 	  	  	  	   	  <p>Quality Time</p>
-  	 	  	  	  	   	  <p>Variety of Activities</p>
-  	 	  	  	  	   	  <a href="#free-trial" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div>
-  	 	  </div>
-  	 </div>
-  </section>
- <!-- End Price -->
-
- <!-- Start Contact -->
-  <section class="contact" id="contact">
-	<div class="container">
- 	<div class="content contact-layout">
-  <!-- Left: Contact Info -->
-  <div class="box text wow slideInLeft">
-    <h2>Get Connected with Inertia</h2>
-	<p class="title-p">We'd love to connect with you! Please join us for a week of free trial classes or reach out via one of the methods below! If you are a student, make sure you are following Inertia's socials to stay up to date on everything Taekwondo!</p>
-                  <div class="info">
-
-    <address>
-      <ul class="info">
-        <li><span class="fa fa-map-marker"></span> 620 N Woods Mill Rd · Chesterfield, MO 63017</li>
-        <li><span class="fa fa-phone"></span> <a href="tel:+16363574093">(636) 357-4093</a></li>
-        <li><span class="fa fa-envelope"></span> <a href="mailto:inertiastl@gmail.com">inertiastl@gmail.com</a></li>
-      </ul>
-    </address>
- </div>
-<div class="social">
-                       <a href="https://www.facebook.com/inertiastl" aria-label="Inertia on Facebook"><span class="fa fa-facebook"></span></a>
-                       <a href="https://www.instagram.com/inertiastl/" aria-label="Inertia on Instagram"><span class="fa fa-instagram"></span></a>
-                       <a href="https://www.youtube.com/channel/UCAe8EBjt8Eemgnx9bXXp1vg" aria-label="Inertia on YouTube"><span class="fa fa-youtube-play"></span></a>
-                  </div>
-
-    <div class="copy">
-      Copyright &copy 2026; Inertia Martial Arts and Fitness LLC: · All Rights Reserved
-    </div>
-  </div>
-
-  <!-- Right: Google Map -->
-  <div class="box map wow slideInRight">
-<iframe title="Map to Inertia Martial Arts & Fitness" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5732.839074988073!2d-90.49911045388482!3d38.67099353241457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df2d42fc10d9e5%3A0x3b16fc798e4297d3!2sInertia%20Martial%20Arts%20and%20Fitness!5e0!3m2!1sen!2sus!4v1766522943882!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</div>
-     </div>
-  </section>
- <!-- End Contact -->
-
-<!-- Start Free Trial Request -->
-<section class="free-trial" id="free-trial">
-  <div class="container">
-    <h2>Request a Free Trial Class</h2>
-    <p class="title-p">
-      Interested in trying Chung Do Kwan Taekwondo?
-      Fill out the form below and we’ll get you scheduled!
-    </p>
-
-    <form
-      action="https://formsubmit.co/inertiastl@gmail.com"
-      method="POST"
-      autocomplete="on">
-
-      <input type="hidden" name="_subject" value="Free Trial Class Request">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <label class="sr-only" for="trial-name">Your Name</label>
-      <input id="trial-name" type="text" name="name" placeholder="Your Name" required autocomplete="name">
-      <label class="sr-only" for="trial-email">Your Email</label>
-      <input id="trial-email" type="email" name="email" placeholder="Your Email" required autocomplete="email">
-      <label class="sr-only" for="trial-phone">Your Phone Number</label>
-      <input id="trial-phone" type="tel" name="phone" placeholder="Your Phone Number" autocomplete="tel">
-      <label class="sr-only" for="trial-message">Tell us who the trial is for</label>
-      <textarea id="trial-message" name="message" placeholder="Tell us who the trial is for (age, experience, questions)"></textarea>
-
-      <button type="submit">Request Free Trial</button>
-    </form>
-  </div>
-</section>
-<!-- End Free Trial Request -->
-
- </main>
-
- <!-- jquery -->
-
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-	$(document).ready(function(){
-
-      $(".ham-burger, .nav ul li a").click(function(){
-        $(".nav").toggleClass("open");
-        $(".ham-burger").toggleClass("active");
-        const isOpen = $(".ham-burger").hasClass("active");
-        $(".ham-burger").attr("aria-expanded", isOpen ? "true" : "false");
-      })
-      $(".accordian-container").click(function(){
-      	$(".accordian-container").children(".body").slideUp();
-      	$(".accordian-container").removeClass("active")
-      	$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
-      	$(this).children(".body").slideDown();
-      	$(this).addClass("active")
-      	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
-      })
-
-       $(".nav ul li a, .go-down").click(function(event){
-         if(this.hash !== ""){
-
-              event.preventDefault();
-
-              var hash=this.hash; 
-
-              $('html,body').animate({
-                scrollTop:$(hash).offset().top
-              },800 , function(){
-                 window.location.hash=hash;
-              });
-
-              // add active class in navigation
-              $(".nav ul li a").removeClass("active")
-              $(this).addClass("active")
-         }
-      })
-})
-
-</script>
-<script src="js/wow.min.js"></script>
-<script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       0,
+    window.addEventListener('scroll', function() {
+      const y = window.scrollY;
+      if (y > 80) {
+        navbar.classList.add('scrolled');
+        backTop.classList.add('visible');
+      } else {
+        navbar.classList.remove('scrolled');
+        backTop.classList.remove('visible');
       }
-    );
-    wow.init();
+      lastScroll = y;
+    }, { passive: true });
+
+    // ── Active nav link on scroll ───────────────────────────────
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          navLinks.forEach(function(link) { link.classList.remove('active'); });
+          const activeLink = document.querySelector('.nav-link[href="#' + entry.target.id + '"]');
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(function(s) { observer.observe(s); });
+
+    // ── Fade-in on scroll ──────────────────────────────────────
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(function(el) { fadeObserver.observe(el); });
+
+    // ── Lineage cascade animation ──────────────────────────────
+    var lineageChain = document.getElementById('lineage-chain');
+    if (lineageChain) {
+      var lineageActivated = false;
+      var lineageObs = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !lineageActivated) {
+          lineageActivated = true;
+          var nodes = lineageChain.querySelectorAll('.lineage-node-wrap');
+          var connectors = lineageChain.querySelectorAll('.lineage-connector');
+          nodes.forEach(function(node, i) {
+            setTimeout(function() { node.classList.add('active'); }, i * 350);
+          });
+          connectors.forEach(function(conn, i) {
+            setTimeout(function() { conn.classList.add('active'); }, i * 350 + 200);
+          });
+          lineageObs.disconnect();
+        }
+      }, { threshold: 0.25 });
+      lineageObs.observe(lineageChain);
+
+      // Hover cascade: hovering a node highlights it + preceding connectors
+      var allNodes = lineageChain.querySelectorAll('.lineage-node-wrap');
+      allNodes.forEach(function(node, idx) {
+        node.addEventListener('mouseenter', function() {
+          allNodes.forEach(function(n, i) {
+            if (i <= idx) n.classList.add('active'); else n.classList.remove('active');
+          });
+          var allConns = lineageChain.querySelectorAll('.lineage-connector');
+          allConns.forEach(function(c, i) {
+            if (i < idx) c.classList.add('active'); else c.classList.remove('active');
+          });
+        });
+      });
+      lineageChain.addEventListener('mouseleave', function() {
+        lineageChain.querySelectorAll('.lineage-node-wrap').forEach(function(n) { n.classList.add('active'); });
+        lineageChain.querySelectorAll('.lineage-connector').forEach(function(c) { c.classList.add('active'); });
+      });
+    }
+
+    // ── Hero slideshow ─────────────────────────────────────────
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+    let slideInterval;
+
+    function goToSlide(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      dots[current].setAttribute('aria-selected', 'false');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      dots[current].setAttribute('aria-selected', 'true');
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(function() { goToSlide(current + 1); }, 5000);
+    }
+
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() {
+        clearInterval(slideInterval);
+        goToSlide(i);
+        startSlider();
+      });
+    });
+
+    startSlider();
+
+    // ── Mobile menu ────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', function() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ── Schedule filter ────────────────────────────────────────
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const slots = document.querySelectorAll('.schedule-slot');
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        slots.forEach(function(slot) {
+          const classes = slot.getAttribute('data-class') || '';
+          if (filter === 'all' || classes.includes(filter)) {
+            slot.style.display = '';
+            slot.style.opacity = '1';
+          } else {
+            slot.style.opacity = '0.2';
+            slot.style.pointerEvents = 'none';
+          }
+        });
+        // Reset pointer events after a moment
+        if (filter !== 'all') {
+          setTimeout(function() {
+            slots.forEach(function(slot) {
+              const classes = slot.getAttribute('data-class') || '';
+              if (!classes.includes(filter)) {
+                slot.style.pointerEvents = '';
+              }
+            });
+          }, 300);
+        } else {
+          slots.forEach(function(slot) { slot.style.pointerEvents = ''; });
+        }
+      });
+    });
+
+    // ── Form submission ────────────────────────────────────────
+    const form = document.getElementById('trial-form');
+    const formView = document.getElementById('form-view');
+    const formSuccess = document.getElementById('form-success');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Basic validation
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(function(field) {
+        field.style.borderColor = '';
+        if (!field.value.trim()) {
+          field.style.borderColor = 'var(--red)';
+          valid = false;
+        }
+      });
+      if (!valid) {
+        form.querySelector('[required]:invalid, [required][style*="red"]').focus();
+        return;
+      }
+      // Encode as mailto (fallback — in production, replace with fetch to API)
+      const data = new FormData(form);
+      const params = [];
+      data.forEach(function(v, k) { if (v) params.push(encodeURIComponent(k) + '=' + encodeURIComponent(v)); });
+      // Show success
+      formView.style.display = 'none';
+      formSuccess.style.display = 'block';
+      // Also open mailto as fallback
+      const name = data.get('first_name') + ' ' + data.get('last_name');
+      const email = data.get('email');
+      const program = data.get('age_group');
+      const subject = encodeURIComponent('Free Trial Request from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nProgram: ' + program + '\n\nSent from inertiastl.com');
+      setTimeout(function() {
+        window.location.href = 'mailto:inertiastl@gmail.com?subject=' + subject + '&body=' + body;
+      }, 800);
+    });
+
+    // ── Respect reduced motion for slideshow ───────────────────
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReduced.matches) {
+      clearInterval(slideInterval);
+      slides.forEach(function(s) { s.style.transition = 'none'; });
+      slides[0].classList.add('active');
+    }
+
+  })();
   </script>
 
-<!-- Free Trial Popup -->
-<div id="trial-popup">
-  <div class="popup-content">
-    <span class="popup-close">&times;</span>
-    <h2>Try a Free Week of Taekwondo</h2>
-    <p>
-      New students are invited to a FREE trial week at Inertia Martial Arts & Fitness.
-      No obligation — just come train!
-    </p>
-	   <a href="#free-trial" class="popup-btn" id="popup-trial-btn">Request Free Trial</a>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("trial-popup");
-    const closeBtn = document.querySelector(".popup-close");
-    const trialBtn = document.getElementById("popup-trial-btn");
-
-    if (!localStorage.getItem("trialPopupShown")) {
-      setTimeout(() => {
-        popup.style.display = "flex";
-      }, 1500);
-    }
-
-    function closePopup() {
-      popup.style.display = "none";
-      localStorage.setItem("trialPopupShown", "true");
-    }
-
-    closeBtn.addEventListener("click", closePopup);
-    trialBtn.addEventListener("click", closePopup);
-  });
-</script>
-
-<!-- Add this script at the bottom of your body -->
-<script>
-  const buttons = document.querySelectorAll('.calendar-tabs button');
-  const iframe = document.getElementById('calendar-iframe');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from all buttons
-      buttons.forEach(b => b.classList.remove('active'));
-      // Add active to clicked button
-      btn.classList.add('active');
-
-      // Update calendar iframe mode
-      const mode = btn.dataset.mode;
-      iframe.src = `https://calendar.google.com/calendar/embed?src=inertiastl@gmail.com&ctz=America/Chicago&mode=${mode}`;
-    });
-  });
-</script>
-	
 </body>
-
-
-
 </html>
