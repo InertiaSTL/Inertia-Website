@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDKA — Chung Do Kwan Association | Member Schools</title>
+  <meta name="description" content="The Chung Do Kwan Association (CDKA) is a network of authentic Chung Do Kwan Taekwondo schools across the St. Louis metro area and beyond.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── TOKENS ──────────────────────────────────────────── */
+    :root {
+      --black:      #0A0A0A;
+      --white:      #F5F5F5;
+      --red:        #C0392B;
+      --red-hover:  #96281B;
+      --red-glow:   rgba(192,57,43,0.35);
+      --grey-100:   #141414;
+      --grey-200:   #1E1E1E;
+      --grey-300:   #2C2C2C;
+      --grey-500:   #7A7A7A;
+      --radius:     4px;
+    }
+
+    /* ── RESET ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ── SEIGAIHA BACKGROUND PATTERN ────────────────────── */
+    .seigaiha-bg {
+      background-color: var(--black);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cdefs%3E%3Cstyle%3E.s%7Bfill:none;stroke:%23C0392B;stroke-width:0.4;opacity:0.18;%7D%3C/style%3E%3C/defs%3E%3Cellipse class='s' cx='30' cy='60' rx='30' ry='30'/%3E%3Cellipse class='s' cx='30' cy='60' rx='24' ry='24'/%3E%3Cellipse class='s' cx='30' cy='60' rx='18' ry='18'/%3E%3Cellipse class='s' cx='0' cy='30' rx='30' ry='30'/%3E%3Cellipse class='s' cx='0' cy='30' rx='24' ry='24'/%3E%3Cellipse class='s' cx='0' cy='30' rx='18' ry='18'/%3E%3Cellipse class='s' cx='60' cy='30' rx='30' ry='30'/%3E%3Cellipse class='s' cx='60' cy='30' rx='24' ry='24'/%3E%3Cellipse class='s' cx='60' cy='30' rx='18' ry='18'/%3E%3C/svg%3E");
+      background-size: 60px 60px;
+    }
+
+    /* ── NAVBAR ──────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(245,245,245,0.06);
+      height: 64px;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; gap: 32px;
+      height: 100%; padding: 0 24px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--white); flex-shrink: 0;
+    }
+    .nav-logo-img { width: 36px; height: 36px; object-fit: contain; }
+    .nav-logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.04em; line-height: 1.2;
+    }
+    .nav-links { display: flex; gap: 28px; margin-left: auto; }
+    .nav-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 500;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      color: rgba(245,245,245,0.7);
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--white); }
+    .nav-cta { margin-left: 24px; flex-shrink: 0; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--red); color: var(--white);
+      padding: 10px 22px; border-radius: var(--radius);
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      transition: background 0.2s, box-shadow 0.2s;
+      border: none; cursor: pointer; text-decoration: none;
+    }
+    .btn-primary:hover {
+      background: var(--red-hover);
+      box-shadow: 0 0 20px var(--red-glow);
+    }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer;
+      padding: 8px; margin-left: auto;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--white); border-radius: 2px;
+      transition: all 0.3s;
+    }
+    #mobile-menu {
+      display: none; position: fixed;
+      top: 64px; left: 0; right: 0; z-index: 999;
+      background: rgba(10,10,10,0.98);
+      border-bottom: 1px solid rgba(245,245,245,0.06);
+      padding: 16px 24px 24px;
+      flex-direction: column; gap: 4px;
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; font-weight: 500;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      color: rgba(245,245,245,0.8);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(245,245,245,0.06);
+    }
+    #mobile-menu a:last-child { border-bottom: none; margin-top: 12px; }
+    #mobile-menu a:hover { color: var(--white); }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    .page-hero {
+      padding: 120px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center top, rgba(192,57,43,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-logo {
+      width: 140px; height: 140px;
+      object-fit: contain;
+      margin: 0 auto 28px;
+      filter: drop-shadow(0 0 24px rgba(192,57,43,0.3));
+    }
+    .hero-eyebrow {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 16px;
+    }
+    .hero-eyebrow-line { width: 40px; height: 1px; background: var(--red); }
+    .page-hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700; letter-spacing: 0.02em;
+      line-height: 1.1; margin-bottom: 16px;
+    }
+    .page-hero h1 .accent { color: var(--red); }
+    .page-hero p {
+      font-size: clamp(14px, 2vw, 17px);
+      font-weight: 300; color: rgba(245,245,245,0.65);
+      max-width: 560px; margin: 0 auto;
+      line-height: 1.7;
+    }
+    .hero-divider {
+      width: 60px; height: 2px;
+      background: var(--red);
+      margin: 28px auto 0;
+    }
+
+    /* ── CAROUSEL SECTION ───────────────────────────────── */
+    .schools-section {
+      padding: 60px 0 100px;
+      position: relative;
+    }
+    .section-label {
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 48px;
+    }
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 0 0 24px;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+      padding: 8px 24px 8px;
+    }
+
+    /* School card */
+    .school-card {
+      flex: 0 0 280px;
+      background: var(--grey-100);
+      border: 1px solid rgba(245,245,245,0.07);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      display: flex; flex-direction: column;
+    }
+    .school-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(192,57,43,0.4);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(192,57,43,0.15);
+    }
+    .card-logo-wrap {
+      background: var(--grey-200);
+      padding: 32px 24px;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 160px;
+      border-bottom: 1px solid rgba(245,245,245,0.05);
+    }
+    .card-logo-wrap img {
+      width: 120px; height: 120px;
+      object-fit: contain;
+    }
+    .card-logo-wrap .logo-placeholder {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--grey-300);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 28px; font-weight: 700; color: var(--red);
+    }
+    .card-body {
+      padding: 22px 22px 20px;
+      flex: 1; display: flex; flex-direction: column; gap: 8px;
+    }
+    .card-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px; font-weight: 600;
+      letter-spacing: 0.03em; line-height: 1.2;
+    }
+    .card-instructor {
+      font-size: 12px; font-weight: 500;
+      color: var(--red); letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .card-address {
+      font-size: 12px; font-weight: 300;
+      color: rgba(245,245,245,0.55);
+      line-height: 1.55; margin-top: 4px; flex: 1;
+    }
+    .card-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 14px;
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--red);
+      border: 1px solid rgba(192,57,43,0.35);
+      border-radius: var(--radius);
+      padding: 8px 14px;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      align-self: flex-start;
+    }
+    .card-link:hover {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--white);
+    }
+    .card-link svg { flex-shrink: 0; }
+
+    /* Carousel controls */
+    .carousel-controls {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-top: 36px;
+    }
+    .carousel-btn {
+      width: 44px; height: 44px;
+      background: var(--grey-200);
+      border: 1px solid rgba(245,245,245,0.08);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--white);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .carousel-btn:hover {
+      background: var(--red);
+      border-color: var(--red);
+    }
+    .carousel-btn:disabled {
+      opacity: 0.3; cursor: default;
+    }
+    .carousel-btn:disabled:hover {
+      background: var(--grey-200);
+      border-color: rgba(245,245,245,0.08);
+    }
+    .carousel-dots {
+      display: flex; gap: 8px;
+    }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(245,245,245,0.2);
+      border: none; cursor: pointer; padding: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .carousel-dot.active {
+      background: var(--red);
+      transform: scale(1.2);
+    }
+
+    /* Grid view fallback for wide screens */
+    @media (min-width: 1100px) {
+      .carousel-track {
+        flex-wrap: wrap;
+        transform: none !important;
+        justify-content: center;
+      }
+      .carousel-controls { display: none; }
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: var(--grey-100);
+      border-top: 1px solid rgba(245,245,245,0.06);
+      padding: 60px 24px 0;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(245,245,245,0.06);
+    }
+    .footer-logo {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+    }
+    .footer-desc {
+      font-size: 13px; font-weight: 300;
+      color: rgba(245,245,245,0.5);
+      line-height: 1.7; margin-bottom: 24px;
+      max-width: 300px;
+    }
+    .footer-col-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(245,245,245,0.4); margin-bottom: 20px;
+    }
+    .footer-col { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a {
+      font-size: 13px; font-weight: 300;
+      color: rgba(245,245,245,0.6);
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      padding: 20px 0 28px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .footer-copy {
+      font-size: 11px; font-weight: 300;
+      color: rgba(245,245,245,0.3);
+    }
+    .footer-tagline {
+      font-size: 10px; font-weight: 300;
+      color: rgba(245,245,245,0.18);
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 900px) {
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+    }
+
+    /* ── BACK TO TOP ─────────────────────────────────────── */
+    #back-top {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--grey-200);
+      border: 1px solid rgba(245,245,245,0.08);
+      color: var(--white); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, background 0.2s;
+      z-index: 500;
+    }
+    #back-top.visible { opacity: 1; pointer-events: auto; }
+    #back-top:hover { background: var(--red); }
+
+    /* ── FADE-IN ANIMATION ───────────────────────────────── */
+    .fade-in {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body class="seigaiha-bg">
+
+  <!-- Skip link -->
+  <a href="#main" style="position:absolute;top:-100px;left:0;background:var(--red);color:white;padding:8px 16px;z-index:9999;border-radius:0 0 4px 0;font-family:'Inter',sans-serif;font-size:13px;" onfocus="this.style.top='0'">Skip to main content</a>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────── -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo" aria-label="Inertia Martial Arts home">
+        <img class="nav-logo-img" src="images/logo.png" alt="Inertia Martial Arts logo" onerror="this.style.display='none'">
+        <span class="nav-logo-text">INERTIA MARTIAL<br>ARTS &amp; FITNESS</span>
+      </a>
+      <div class="nav-links">
+        <a href="/index.html#programs" class="nav-link">Programs</a>
+        <a href="/index.html#schedule" class="nav-link">Schedule</a>
+        <a href="/index.html#about" class="nav-link">About</a>
+        <a href="/index.html#location" class="nav-link">Location</a>
+        <a href="/index.html#tournaments" class="nav-link">Tournaments</a>
+        <a href="/resources.html" class="nav-link">Resources</a>
+        <a href="/cdka.html" class="nav-link active">CDKA</a>
+      </div>
+      <div class="nav-cta">
+        <a href="/index.html#free-trial" class="btn-primary">Start Free Trial</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="menu" aria-label="Mobile navigation">
+    <a href="/index.html#programs" role="menuitem">Programs</a>
+    <a href="/index.html#schedule" role="menuitem">Schedule</a>
+    <a href="/index.html#about" role="menuitem">About</a>
+    <a href="/index.html#location" role="menuitem">Location</a>
+    <a href="/index.html#tournaments" role="menuitem">Tournaments</a>
+    <a href="/resources.html" role="menuitem">Resources</a>
+    <a href="/cdka.html" role="menuitem" style="color:var(--red);">CDKA</a>
+    <a href="/index.html#free-trial" class="btn-primary" role="menuitem">Start Free Trial →</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section class="page-hero">
+      <img src="images/logo-cdka.png" alt="Chung Do Kwan Association logo" class="hero-logo fade-in">
+      <div class="hero-eyebrow fade-in">
+        <div class="hero-eyebrow-line"></div>
+        <span>Authentic Chung Do Kwan Taekwondo</span>
+        <div class="hero-eyebrow-line"></div>
+      </div>
+      <h1 class="fade-in">
+        Chung Do Kwan<br><span class="accent">Association</span>
+      </h1>
+      <p class="fade-in">
+        A community of schools united by tradition, discipline, and the authentic practice of Chung Do Kwan Taekwondo across the greater St. Louis region and beyond.
+      </p>
+      <div class="hero-divider fade-in"></div>
+    </section>
+
+    <!-- ── MEMBER SCHOOLS ─────────────────────────────────── -->
+    <section class="schools-section seigaiha-bg" aria-label="Member Schools">
+      <div class="section-label">Member Schools</div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carousel-track">
+
+          <!-- 1. Blue Wave -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-main.png" alt="Blue Wave Martial Arts logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">BW</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Blue Wave Martial Arts</div>
+              <div class="card-instructor">Master David Blevins</div>
+              <div class="card-address">St. Louis Metro Area, MO</div>
+              <a href="https://www.bluewavemartialartsstl.com/" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Website
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Blue Wave Forever -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-forever.png" alt="Blue Wave Forever logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">BWF</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Blue Wave Forever</div>
+              <div class="card-instructor">Instructor John Mee</div>
+              <div class="card-address">1390 Josephville Rd<br>Wentzville, MO 63385</div>
+              <a href="https://www.facebook.com/Blue-Wave-Forever" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Page
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. The Lyndell Institute -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-lyndell.png" alt="The Lyndell Institute logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">LI</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">The Lyndell Institute</div>
+              <div class="card-instructor">Jamie White &amp; Sharon Thornton</div>
+              <div class="card-address">515 Huber Park Ct.<br>Weldon Spring, MO 63304</div>
+              <a href="https://lyndellinstitute.com/" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Website
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Blue Wave Strong -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-strong.png" alt="Blue Wave Strong logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">BWS</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Blue Wave Strong</div>
+              <div class="card-instructor">Instructor Tammy Bauer</div>
+              <div class="card-address">1409 Troy Rd<br>Edwardsville, IL 62025</div>
+              <a href="https://www.bluewavestrong.com/" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Website
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Blue Wave Life -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-life.png" alt="Blue Wave Life logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">BWL</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Blue Wave Life</div>
+              <div class="card-instructor">Rob Chisenhall &amp; Julie Nowakowski</div>
+              <div class="card-address">Brentwood Community Center<br>2505 S. Brentwood Blvd<br>Brentwood, MO</div>
+              <a href="https://www.bluewavelife.net" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Website
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Blue Wave West -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-west.png" alt="Blue Wave West logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">BWW</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Blue Wave West</div>
+              <div class="card-instructor">Jake &amp; Lauren West</div>
+              <div class="card-address">Stonebridge Church<br>201 Meriwether Lewis Dr<br>O'Fallon, MO 63368</div>
+              <a href="https://www.facebook.com/Wyndgate-Tae-Kwon-Do-Club" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Page
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 7. Blue Wave Spirit -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-spirit.png" alt="Blue Wave Spirit logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">BWS</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Blue Wave Spirit</div>
+              <div class="card-instructor">Instructor Tom Withee</div>
+              <div class="card-address">95 Eastgate Shopping Center<br>East Alton, IL 62024</div>
+              <a href="https://www.bluewavespirit.com" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Website
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 8. Inertia Martial Arts -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-inertia.png" alt="Inertia Martial Arts logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">IMA</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Inertia Martial Arts</div>
+              <div class="card-instructor">Joe &amp; Paige Hoeber</div>
+              <div class="card-address">620 N Woods Mill Rd<br>Chesterfield, MO 63017</div>
+              <a href="https://www.inertiastl.com" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Website
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 9. Blue Wave Foundation -->
+          <div class="school-card fade-in">
+            <div class="card-logo-wrap">
+              <img src="images/logo-foundation.png" alt="Blue Wave Foundation logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="logo-placeholder" style="display:none;">BWF</div>
+            </div>
+            <div class="card-body">
+              <div class="card-name">Blue Wave Foundation</div>
+              <div class="card-instructor">Instructor Kennedy Fitzgibbon</div>
+              <div class="card-address">2300 McKelvey Rd<br>Maryland Heights, MO 63043</div>
+              <a href="https://bluewavefoundation.net/" target="_blank" rel="noopener noreferrer" class="card-link">
+                Visit Website
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1 10L10 1M10 1H3M10 1V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /.carousel-track -->
+      </div><!-- /.carousel-wrapper -->
+
+      <!-- Controls (shown on smaller screens) -->
+      <div class="carousel-controls" id="carousel-controls">
+        <button class="carousel-btn" id="prev-btn" aria-label="Previous schools" disabled>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+        <button class="carousel-btn" id="next-btn" aria-label="Next schools">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ──────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img class="nav-logo-img" src="images/logo.png" alt="Inertia Martial Arts logo" style="width:36px;height:36px;" onerror="this.style.display='none'">
+            <span style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.04em;line-height:1.2;">INERTIA MARTIAL<br>ARTS &amp; FITNESS</span>
+          </div>
+          <p class="footer-desc">Authentic Chung Do Kwan Taekwondo in Chesterfield, Missouri. Discipline, tradition, and athletic excellence for all ages.</p>
+          <a href="/index.html#free-trial" class="btn-primary" style="font-size:13px;padding:10px 22px;">Start Free Trial →</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Programs</div>
+          <a href="/index.html#programs">Kids Taekwondo</a>
+          <a href="/index.html#programs">Teen &amp; Adult</a>
+          <a href="/index.html#free-trial">Free Trial Week</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navigate</div>
+          <a href="/index.html">Home</a>
+          <a href="/index.html#schedule">Schedule</a>
+          <a href="/index.html#about">About</a>
+          <a href="/index.html#location">Location</a>
+          <a href="/cdka.html">CDKA</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <a href="mailto:inertiastl@gmail.com">inertiastl@gmail.com</a>
+          <a href="https://www.google.com/maps/place/Inertia+Martial+Arts+and+Fitness" target="_blank" rel="noopener noreferrer">Chesterfield, MO</a>
+          <a href="https://www.facebook.com/inertiastl" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/inertiastl" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Inertia Martial Arts &amp; Fitness LLC · 620 N Woods Mill Rd, Chesterfield, MO 63017 · <a href="mailto:inertiastl@gmail.com" style="color:inherit;">inertiastl@gmail.com</a> · <a href="/privacy.html" style="color:inherit;">Privacy Policy</a></p>
+        <p class="footer-tagline">Taekwondo Chesterfield MO · Martial Arts Chesterfield · Chung Do Kwan · CDKA</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script>
+    // ── Mobile menu toggle ──────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+
+    // ── Back to top ─────────────────────────────────────────
+    const backTop = document.getElementById('back-top');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    // ── Fade-in on scroll ───────────────────────────────────
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // ── Carousel ─────────────────────────────────────────────
+    (function() {
+      const track  = document.getElementById('carousel-track');
+      const dotsWrap = document.getElementById('carousel-dots');
+      const prevBtn  = document.getElementById('prev-btn');
+      const nextBtn  = document.getElementById('next-btn');
+
+      let current = 0;
+      const cards = track.querySelectorAll('.school-card');
+      const total = cards.length;
+      const visibleCount = () => window.innerWidth >= 900 ? 3 : window.innerWidth >= 600 ? 2 : 1;
+
+      // Build dots
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const pages = Math.ceil(total / visibleCount());
+        for (let i = 0; i < pages; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === current ? ' active' : '');
+          dot.setAttribute('aria-label', 'Page ' + (i + 1));
+          dot.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(dot);
+        }
+      }
+
+      function goTo(page) {
+        const pages = Math.ceil(total / visibleCount());
+        current = Math.max(0, Math.min(page, pages - 1));
+        const cardWidth = cards[0].offsetWidth + 24; // gap = 24px
+        const offset = current * visibleCount() * cardWidth;
+        track.style.transform = `translateX(-${offset}px)`;
+        // Update dots
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current >= pages - 1;
+      }
+
+      prevBtn.addEventListener('click', () => goTo(current - 1));
+      nextBtn.addEventListener('click', () => goTo(current + 1));
+
+      // Rebuild on resize
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => { current = 0; buildDots(); goTo(0); }, 200);
+      });
+
+      buildDots();
+      goTo(0);
+
+      // Touch/swipe support
+      let touchStartX = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 50) dx < 0 ? goTo(current + 1) : goTo(current - 1);
+      });
+    })();
+  </script>
+
+</body>
+</html>
